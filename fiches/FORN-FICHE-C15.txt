@@ -1,0 +1,233 @@
+NDAP SUKULU · FORN · fiche FORN-FICHE-C15
+Chapitre 15 : Forensique du nuage et des applications
+
+Version papier, à utiliser en attendant l'ouverture du portail NDAP SUKULU.
+La fiche complète compte 40 questions. Répondez sur la grille en fin de fiche.
+Durée indicative : 60 minutes. Seuil de réussite : 60 %.
+Les corrections figurent dans le livret de correction du cours.
+
+========================================================================
+Questions à choix multiple (une seule bonne réponse)
+========================================================================
+
+ 1. Dans le nuage, la donnée est chez :
+      a) Un tiers
+      b) Soi
+      c) La vente
+      d) La météo
+
+ 2. On ne peut pas l'imager, il faut la :
+      a) Vendre
+      b) Demander
+      c) Chiffrer
+      d) Payer
+
+ 3. Côté client, on trouve :
+      a) Rien
+      b) Le prix
+      c) Fichiers de synchronisation, jetons
+      d) La météo
+
+ 4. Côté service, on trouve :
+      a) Rien
+      b) Le prix
+      c) La météo
+      d) Comptes, journaux, fichiers
+
+ 5. Un jeton trouvé autorise-t-il l'accès au service ?
+      a) Non
+      b) Oui
+      c) Toujours
+      d) Parfois
+
+ 6. On obtient une preuve chez l'hébergeur par :
+      a) La force
+      b) Les voies légales
+      c) La vente
+      d) La météo
+
+ 7. La coopération internationale s'appuie sur :
+      a) La paie
+      b) La météo
+      c) Budapest
+      d) La vente
+
+ 8. Sur le poste, le dossier de synchronisation garde :
+      a) Rien
+      b) Le prix
+      c) La météo
+      d) Une copie locale
+
+ 9. Le téléversement est daté du :
+      a) 5 janvier
+      b) 6 mars
+      c) 3 janvier
+      d) 1er mars
+
+10. La trace locale est :
+      a) Irrecevable
+      b) Recevable
+      c) Vendue
+      d) Chiffrée
+
+11. La donnée du nuage est souvent à :
+      a) La maison
+      b) La vente
+      c) L'étranger
+      d) La météo
+
+12. On documente le jeton comme trace :
+      a) Nulle
+      b) De vente
+      c) De météo
+      d) Locale
+
+13. Se connecter avec un jeton hors cadre expose à :
+      a) L'irrecevabilité
+      b) Rien
+      c) Un bonus
+      d) La vente
+
+14. On exploite d'abord les traces :
+      a) Du service
+      b) Locales
+      c) De vente
+      d) De météo
+
+15. La trace locale établit le téléversement sans attendre :
+      a) La météo
+      b) Le prix
+      c) L'hébergeur
+      d) La vente
+
+16. On compose avec la ______ des données :
+      a) Vente
+      b) Météo
+      c) Facture
+      d) Localisation
+
+17. Le poste saisi garde souvent des traces du :
+      a) Service
+      b) Prix
+      c) Marché
+      d) Nuage
+
+18. La demande se fait au point de contact du :
+      a) Prix
+      b) Service
+      c) Marché
+      d) Nuage
+
+19. Priorité aux traces locales car elles sont :
+      a) Lentes
+      b) Vendues
+      c) Immédiatement recevables
+      d) Secrètes
+
+20. La demande au service est engagée pour :
+      a) Vendre
+      b) Chiffrer
+      c) Payer
+      d) Corroborer
+
+========================================================================
+Vrai ou faux
+========================================================================
+
+21. Dans le nuage, la donnée est chez un tiers, souvent à l'étranger.
+      Vrai / Faux
+
+22. Côté client, le poste garde souvent des traces du service.
+      Vrai / Faux
+
+23. Un jeton trouvé autorise à se connecter au service.
+      Vrai / Faux
+
+24. On obtient une preuve chez un hébergeur par les voies légales.
+      Vrai / Faux
+
+25. Le téléversement vers le service est daté du 5 janvier.
+      Vrai / Faux
+
+26. On attend l'hébergeur avant d'exploiter les traces locales.
+      Vrai / Faux
+
+27. Le dossier de synchronisation garde une copie locale du fichier.
+      Vrai / Faux
+
+28. La coopération internationale s'appuie sur la Convention de Budapest.
+      Vrai / Faux
+
+29. Une donnée dans le nuage s'image comme un disque saisi.
+      Vrai / Faux
+
+30. La trace locale de téléversement est recevable (poste saisi).
+      Vrai / Faux
+
+========================================================================
+Textes à trous
+========================================================================
+
+31. Dans le nuage, la donnée est chez un ______.
+
+32. On ne peut pas l'imager, il faut la ______.
+
+33. Un jeton trouvé n'______ pas l'accès au service.
+
+34. On obtient une preuve chez l'hébergeur par les voies ______.
+
+35. Le dossier de ______ garde une copie locale.
+
+36. Le téléversement est daté du ______ janvier.
+
+37. La coopération internationale s'appuie sur ______.
+
+38. On exploite d'abord les traces ______.
+
+39. Le poste saisi garde souvent des traces du ______.
+
+40. La donnée du nuage est souvent à l'______.
+
+========================================================================
+Grille de réponses   Nom : ............................  Matricule : ............
+========================================================================
+ 1. ............................................
+ 2. ............................................
+ 3. ............................................
+ 4. ............................................
+ 5. ............................................
+ 6. ............................................
+ 7. ............................................
+ 8. ............................................
+ 9. ............................................
+10. ............................................
+11. ............................................
+12. ............................................
+13. ............................................
+14. ............................................
+15. ............................................
+16. ............................................
+17. ............................................
+18. ............................................
+19. ............................................
+20. ............................................
+21. ............................................
+22. ............................................
+23. ............................................
+24. ............................................
+25. ............................................
+26. ............................................
+27. ............................................
+28. ............................................
+29. ............................................
+30. ............................................
+31. ............................................
+32. ............................................
+33. ............................................
+34. ............................................
+35. ............................................
+36. ............................................
+37. ............................................
+38. ............................................
+39. ............................................
+40. ............................................

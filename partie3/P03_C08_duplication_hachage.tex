@@ -1,0 +1,205 @@
+% ============================================================================
+% Fichier  : partie3/P03_C08_duplication_hachage.tex : FORN (LPI342)
+% Sources : ISO/IEC 27037 ; NIST SP 800-86 ; ACPO. Opération TSANAGA.
+% ============================================================================
+
+\chapter{Duplication et Hachage}
+\label{chap:duplication}
+\chaptermark{Duplication et hachage}
+
+\epigraph{%
+    « Le condensat est la signature de l'intégrité~:\\
+    un bit change, il change tout. »%
+}{Principe du cours}
+
+\niveauChapitre{Intermédiaire}{Chapitre~\ref{chap:preserver}.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Comprendre la copie bit à bit (image).
+    \item Comprendre les fonctions de hachage (MD5, SHA-256).
+    \item Utiliser le condensat pour prouver l'intégrité.
+    \item Travailler sur la copie, jamais sur l'original.
+    \item Documenter l'acquisition.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : comment prouver que la copie du disque est identique à l'original, et le restera ?}
+% ============================================================================
+
+On n'analyse jamais l'original~: on en fait une image, dont on prouve la
+fidélité par un condensat. Ce chapitre explique la duplication et le hachage,
+cœur technique de l'intégrité.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item La copie bit à bit (section~\ref{sec:c08-image}).
+    \item Les fonctions de hachage (section~\ref{sec:c08-hachage}).
+    \item Prouver l'intégrité (section~\ref{sec:c08-integrite}).
+    \item Documenter l'acquisition (section~\ref{sec:c08-documenter}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{La Copie Bit à Bit}
+\label{sec:c08-image}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Image forensique}~: copie \emph{bit à bit} d'un support, qui
+reproduit non seulement les fichiers visibles, mais aussi l'espace non alloué,
+les fragments et les métadonnées. Elle se distingue d'une simple copie de
+fichiers, qui perd l'essentiel des traces.
+\end{boxdef}
+
+% ============================================================================
+\section{Les Fonctions de Hachage}
+\label{sec:c08-hachage}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Fonction de hachage}~: fonction qui transforme une donnée, quelle
+que soit sa taille, en une empreinte de longueur fixe (le \termecle{condensat}).
+Un changement d'un seul bit produit un condensat entièrement différent. MD5 et
+SHA-256 en sont des exemples~; SHA-256 est préféré, MD5 étant considéré comme
+faible pour les usages sensibles.
+\end{boxdef}
+
+\begin{tableaucours}{L{3.0cm}L{9.2cm}}{%
+    \tableauHeader{Fonction} &
+    \tableauHeader{Usage}
+}
+MD5 & Historique, rapide~; éviter seule pour un usage sensible \\
+SHA-256 & Recommandée pour l'intégrité forensique \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~8.1. Deux fonctions de hachage}\end{center}
+
+% ============================================================================
+\section{Prouver l'Intégrité}
+\label{sec:c08-integrite}
+% ============================================================================
+
+On calcule le condensat de l'original \emph{avant} la copie, puis celui de la
+copie. S'ils sont identiques, la copie est fidèle et l'original n'a pas
+changé. On recalcule le condensat de la copie avant chaque usage~: s'il
+correspond toujours, la copie est restée intègre.
+
+\begin{boxCRO}
+\textbf{Le condensat sert l'opposabilité.} Un condensat calculé et consigné
+établit la \cro{0}{+}{+}~: il prouve l'intégrité (fiabilité) et rend la pièce
+défendable (opposabilité). Sans condensat, l'intégrité n'est qu'affirmée.
+\end{boxCRO}
+
+% ============================================================================
+\section{Documenter l'Acquisition}
+\label{sec:c08-documenter}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. L'image du disque}
+\textbf{Constatation.} Derrière un bloqueur en écriture, Mme~NKENG réalise
+une image bit à bit du disque de l'ordinateur et calcule son condensat
+SHA-256, qu'elle consigne. Toute l'analyse se fera sur cette image.
+
+\medskip
+\textbf{Analyse} (confiance élevée). Le condensat consigné permettra, à tout
+moment, de prouver que l'image analysée est fidèle à l'original. L'original
+est remis sous scellé, intact.
+\end{boxscenario}
+
+\begin{boxobjet}{Image disque TSA-2026-01}
+\textbf{Nature~:} image bit à bit du disque de l'ordinateur saisi.
+\textbf{Source~:} disque TSA-2026-01, derrière bloqueur en écriture.
+\textbf{Intégrité~:} condensat SHA-256 consigné à l'acquisition.
+\textbf{Opposabilité~:} chaîne de possession continue. \textbf{Usage~:}
+analyse sur l'image, original scellé.
+\end{boxobjet}
+
+\begin{boxmetier}{Analyste forensique}
+\textbf{Hacher, copier, re-hacher.} L'analyste calcule le condensat avant et
+après la copie, et le recalcule avant chaque session de travail. Trois
+gestes, une garantie d'intégrité à toute épreuve.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{L'image bit à bit} copie tout, y compris l'espace non
+          alloué.
+    \item \textbf{Le hachage} produit un condensat sensible au moindre bit.
+    \item \textbf{SHA-256} est préféré à MD5 pour l'intégrité.
+    \item \textbf{Le condensat} prouve la fidélité de la copie.
+    \item \textbf{On analyse la copie}, l'original reste scellé.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: définir l'image bit à bit~;
+expliquer le hachage~; prouver l'intégrité par condensat~; documenter une
+acquisition.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.1. Image \niveaubase}]
+Qu'est-ce qu'une image bit à bit, et en quoi diffère-t-elle d'une copie de
+fichiers~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.2. Condensat \niveaubase}]
+Que se passe-t-il pour le condensat si un seul bit change~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.3. MD5 ou SHA-256 \niveaubase}]
+Quelle fonction préférer pour l'intégrité forensique~? Pourquoi~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.4. Prouver \niveaumoyen}]
+Comment prouver que la copie est fidèle et le reste~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.5. Avant la copie \niveaumoyen}]
+Pourquoi calculer le condensat de l'original avant la copie~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.6. L'espace non alloué \niveaumoyen}]
+Pourquoi une image bit à bit capture-t-elle l'espace non alloué~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.7. CRO \niveaumoyen}]
+Expliquez l'analyse CRO du condensat.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.8. Re-hacher \niveaumoyen}]
+Pourquoi recalculer le condensat avant chaque session de travail~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.9. Procédure \niveauexpert}]
+Rédigez la procédure d'acquisition par image du disque de TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~8.10. Fiche d'image \niveauexpert}]
+Concevez la fiche d'acquisition (image) du cabinet NYONG SÉCURITÉ.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27037~\cite{iso27037}~; NIST SP~800-86~\cite{nist80086}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Toutes les traces ne survivent pas également~: le
+Chapitre~\ref{chap:acquisition} traite de l'ordre de volatilité et de
+l'acquisition à chaud.
+\end{boxinfo}

@@ -1,0 +1,233 @@
+NDAP SUKULU · FORN · fiche FORN-FICHE-C11
+Chapitre 11 : Fichiers supprimés, fragments et artefacts
+
+Version papier, à utiliser en attendant l'ouverture du portail NDAP SUKULU.
+La fiche complète compte 40 questions. Répondez sur la grille en fin de fiche.
+Durée indicative : 60 minutes. Seuil de réussite : 60 %.
+Les corrections figurent dans le livret de correction du cours.
+
+========================================================================
+Questions à choix multiple (une seule bonne réponse)
+========================================================================
+
+ 1. Supprimer un fichier :
+      a) Marque l'espace réutilisable
+      b) L'efface aussitôt
+      c) Le chiffre
+      d) Le vend
+
+ 2. Il subsiste jusqu'à :
+      a) La vente
+      b) La réécriture
+      c) La météo
+      d) Le prix
+
+ 3. La récupération par signatures reconstitue sans :
+      a) La vente
+      b) La météo
+      c) L'index
+      d) Le prix
+
+ 4. La signature d'un fichier trahit son :
+      a) Prix
+      b) Météo
+      c) Propriétaire
+      d) Type
+
+ 5. On se fie à la signature, non à l':
+      a) Extension
+      b) Empreinte
+      c) Index
+      d) Inode
+
+ 6. Un raccourci récent révèle :
+      a) Le prix
+      b) Un document ouvert, un amovible
+      c) La météo
+      d) La vente
+
+ 7. La corbeille, même vidée, peut révéler :
+      a) Rien
+      b) Le prix
+      c) Des fichiers récupérables
+      d) La météo
+
+ 8. Le fichier clients est retrouvé dans l'espace :
+      a) Alloué
+      b) De vente
+      c) De météo
+      d) Non alloué
+
+ 9. La récupération corrobore la copie vers un :
+      a) Amovible
+      b) Nuage
+      c) Marché
+      d) Prix
+
+10. On qualifie un fichier récupéré : nature, source, pertinence, fiabilité et :
+      a) Prix
+      b) Opposabilité
+      c) Météo
+      d) Vente
+
+11. Les données restent tant qu'elles ne sont pas :
+      a) Vendues
+      b) Chiffrées
+      c) Réécrites
+      d) Payées
+
+12. L'extension se change en :
+      a) Un an
+      b) Jamais
+      c) Une vente
+      d) Un clic
+
+13. Elle s'appuie sur les motifs de début et de :
+      a) Fin
+      b) Prix
+      c) Météo
+      d) Vente
+
+14. Le « nettoyage » de l'attaquant laisse souvent :
+      a) Rien
+      b) Des traces récupérables
+      c) Le prix
+      d) La météo
+
+15. La source du fichier récupéré est :
+      a) Le marché
+      b) La météo
+      c) L'image disque
+      d) La vente
+
+16. Un fichier renommé en .txt mais archive reste une :
+      a) Image
+      b) Vente
+      c) Météo
+      d) Archive
+
+17. Le système retire l'entrée de :
+      a) L'index
+      b) La vente
+      c) La météo
+      d) Le prix
+
+18. Les fichiers récents révèlent les :
+      a) Prix
+      b) Documents ouverts
+      c) Météos
+      d) Ventes
+
+19. Le « file carving » retrouve des fichiers dont l'entrée a :
+      a) Grandi
+      b) Vendu
+      c) Disparu
+      d) Payé
+
+20. Le faisceau se :
+      a) Affaiblit
+      b) Vend
+      c) Chiffre
+      d) Renforce
+
+========================================================================
+Vrai ou faux
+========================================================================
+
+21. Supprimer un fichier ne l'efface pas immédiatement.
+      Vrai / Faux
+
+22. La récupération par signatures reconstitue sans l'index.
+      Vrai / Faux
+
+23. On se fie à l'extension d'un fichier, pas à sa signature.
+      Vrai / Faux
+
+24. La corbeille, même vidée, peut révéler des fichiers récupérables.
+      Vrai / Faux
+
+25. Le fichier clients est retrouvé dans l'espace non alloué.
+      Vrai / Faux
+
+26. La signature d'un fichier trahit son type réel.
+      Vrai / Faux
+
+27. Un fichier supprimé est récupérable même après réécriture.
+      Vrai / Faux
+
+28. Un raccourci récent peut révéler un volume amovible.
+      Vrai / Faux
+
+29. La récupération par signatures s'appuie uniquement sur l'index.
+      Vrai / Faux
+
+30. La récupération du fichier corrobore la copie vers un amovible.
+      Vrai / Faux
+
+========================================================================
+Textes à trous
+========================================================================
+
+31. Un fichier supprimé subsiste jusqu'à la ______.
+
+32. La récupération par ______ reconstitue sans l'index.
+
+33. La ______ d'un fichier trahit son type réel.
+
+34. On ne se fie pas à l'______ d'un fichier.
+
+35. Un ______ récent peut révéler un volume amovible.
+
+36. Le fichier clients est retrouvé dans l'espace non ______.
+
+37. On qualifie : nature, source, pertinence, fiabilité, ______.
+
+38. Les données restent tant qu'elles ne sont pas ______.
+
+39. Le carving s'appuie sur les motifs de début et de ______.
+
+40. La ______ du fichier récupéré est l'image disque.
+
+========================================================================
+Grille de réponses   Nom : ............................  Matricule : ............
+========================================================================
+ 1. ............................................
+ 2. ............................................
+ 3. ............................................
+ 4. ............................................
+ 5. ............................................
+ 6. ............................................
+ 7. ............................................
+ 8. ............................................
+ 9. ............................................
+10. ............................................
+11. ............................................
+12. ............................................
+13. ............................................
+14. ............................................
+15. ............................................
+16. ............................................
+17. ............................................
+18. ............................................
+19. ............................................
+20. ............................................
+21. ............................................
+22. ............................................
+23. ............................................
+24. ............................................
+25. ............................................
+26. ............................................
+27. ............................................
+28. ............................................
+29. ............................................
+30. ............................................
+31. ............................................
+32. ............................................
+33. ............................................
+34. ............................................
+35. ............................................
+36. ............................................
+37. ............................................
+38. ............................................
+39. ............................................
+40. ............................................

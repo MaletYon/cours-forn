@@ -1,0 +1,233 @@
+NDAP SUKULU · FORN · fiche FORN-FICHE-C07
+Chapitre 7 : Identifier et préserver les sources
+
+Version papier, à utiliser en attendant l'ouverture du portail NDAP SUKULU.
+La fiche complète compte 40 questions. Répondez sur la grille en fin de fiche.
+Durée indicative : 60 minutes. Seuil de réussite : 60 %.
+Les corrections figurent dans le livret de correction du cours.
+
+========================================================================
+Questions à choix multiple (une seule bonne réponse)
+========================================================================
+
+ 1. Une source de preuve est :
+      a) Un disque ou une clé USB
+      b) La paie
+      c) La météo
+      d) La vente
+
+ 2. La mémoire vive contient :
+      a) La paie
+      b) L'état vivant du système
+      c) La météo
+      d) La vente
+
+ 3. Devant un ordinateur éteint, on :
+      a) L'allume
+      b) Le vend
+      c) Ne l'allume pas
+      d) Le formate
+
+ 4. Devant un ordinateur allumé avec volatil utile, on :
+      a) Éteint
+      b) Vend
+      c) Formate
+      d) Capture la mémoire d'abord
+
+ 5. Un système peut-être chiffré, on évite :
+      a) L'extinction brutale
+      b) La lecture
+      c) La photo
+      d) La note
+
+ 6. Le bloqueur en écriture autorise :
+      a) L'écriture
+      b) La lecture seule
+      c) La vente
+      d) Le chiffrement
+
+ 7. Il interdit toute :
+      a) Lecture
+      b) Photo
+      c) Modification
+      d) Note
+
+ 8. On photographie :
+      a) Le prix
+      b) La météo
+      c) La vente
+      d) L'état initial
+
+ 9. On isole le support des :
+      a) Réseaux
+      b) Prix
+      c) Photos
+      d) Notes
+
+10. Mme NKENG lit le disque derrière un :
+      a) Prix
+      b) Bloqueur en écriture
+      c) Marché
+      d) Nuage
+
+11. Un téléphone est une source :
+      a) Nulle
+      b) De vente
+      c) De preuve
+      d) De météo
+
+12. Allumer un support éteint modifie :
+      a) Rien
+      b) Le prix
+      c) La vente
+      d) Des artefacts
+
+13. Éteindre un conteneur monté peut le :
+      a) Reverrouiller
+      b) Ouvrir
+      c) Vendre
+      d) Chiffrer en clair
+
+14. Sans bloqueur, le branchement peut :
+      a) Rien
+      b) Écrire sur le support
+      c) Vendre
+      d) Payer
+
+15. On note l'heure du système et l'heure :
+      a) De vente
+      b) De météo
+      c) Réelle
+      d) De marché
+
+16. Les équipements réseau contiennent :
+      a) La paie
+      b) La météo
+      c) La vente
+      d) Journaux, flux, configurations
+
+17. Avant d'agir, on :
+      a) Décide et documente
+      b) Vend
+      c) Chiffre
+      d) Paye
+
+18. Après lecture, on vérifie par :
+      a) Prix
+      b) Condensat
+      c) Météo
+      d) Vente
+
+19. L'isolement évite un effacement à :
+      a) La main
+      b) La vente
+      c) Distance
+      d) La météo
+
+20. Face au chiffrement, l'extinction brutale est :
+      a) Idéale
+      b) Obligatoire
+      c) Neutre
+      d) À éviter
+
+========================================================================
+Vrai ou faux
+========================================================================
+
+21. La mémoire vive contient l'état vivant du système.
+      Vrai / Faux
+
+22. Devant un ordinateur éteint, on l'allume pour voir.
+      Vrai / Faux
+
+23. Le bloqueur en écriture autorise la lecture et interdit la modification.
+      Vrai / Faux
+
+24. On capture la mémoire d'abord si des données volatiles sont utiles.
+      Vrai / Faux
+
+25. On éteint brutalement un système peut-être chiffré.
+      Vrai / Faux
+
+26. On photographie l'état initial de la scène.
+      Vrai / Faux
+
+27. Sans bloqueur, un simple branchement peut écrire sur le support.
+      Vrai / Faux
+
+28. Allumer un support éteint ne modifie aucun artefact.
+      Vrai / Faux
+
+29. On isole le support des réseaux dès la saisie.
+      Vrai / Faux
+
+30. Le bloqueur en écriture autorise la modification du support.
+      Vrai / Faux
+
+========================================================================
+Textes à trous
+========================================================================
+
+31. La ______ vive contient l'état vivant du système.
+
+32. Devant un ordinateur éteint, on ne l'______ pas.
+
+33. Le ______ en écriture autorise la lecture sans modification.
+
+34. On capture la ______ d'abord si elle est utile.
+
+35. Face au chiffrement, on évite l'______ brutale.
+
+36. On ______ l'état initial de la scène.
+
+37. On ______ le support des réseaux dès la saisie.
+
+38. Après lecture, on vérifie par ______ qu'on n'a rien modifié.
+
+39. On note l'heure du système et l'heure ______.
+
+40. Un disque, une clé, un téléphone sont des ______ de preuve.
+
+========================================================================
+Grille de réponses   Nom : ............................  Matricule : ............
+========================================================================
+ 1. ............................................
+ 2. ............................................
+ 3. ............................................
+ 4. ............................................
+ 5. ............................................
+ 6. ............................................
+ 7. ............................................
+ 8. ............................................
+ 9. ............................................
+10. ............................................
+11. ............................................
+12. ............................................
+13. ............................................
+14. ............................................
+15. ............................................
+16. ............................................
+17. ............................................
+18. ............................................
+19. ............................................
+20. ............................................
+21. ............................................
+22. ............................................
+23. ............................................
+24. ............................................
+25. ............................................
+26. ............................................
+27. ............................................
+28. ............................................
+29. ............................................
+30. ............................................
+31. ............................................
+32. ............................................
+33. ............................................
+34. ............................................
+35. ............................................
+36. ............................................
+37. ............................................
+38. ............................................
+39. ............................................
+40. ............................................

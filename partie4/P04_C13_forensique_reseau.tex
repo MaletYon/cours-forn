@@ -1,0 +1,195 @@
+% ============================================================================
+% Fichier  : partie4/P04_C13_forensique_reseau.tex : FORN (LPI342)
+% Sources : RFC 3227 ; NIST SP 800-86 ; MITRE ATT&CK. Opération TSANAGA.
+% Le bureau d'analyse travaille sur des journaux de flux exportés (pas de
+% capture graphique).
+% ============================================================================
+
+\chapter{Forensique Réseau}
+\label{chap:reseau}
+\chaptermark{Forensique réseau}
+
+\epigraph{%
+    « Le disque dit ce qu'on a gardé~; le réseau dit ce qu'on a envoyé. »%
+}{Principe du cours}
+
+\niveauChapitre{Intermédiaire à expert}{Chapitre~\ref{chap:memoire}~; notions
+de réseaux.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Identifier les sources de traces réseau.
+    \item Repérer une exfiltration et un canal de pilotage.
+    \item Lire des journaux de flux exportés.
+    \item Analyser les échanges suspects (pilotage, dissimulation par DNS).
+    \item Reconstituer une chronologie réseau.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : le fichier clients a-t-il quitté le réseau de LiZbiZ, et vers où ?}
+% ============================================================================
+
+Au-delà de la copie sur clé, M.~NDONGO a-t-il aussi envoyé le fichier par le
+réseau~? Les journaux de flux et de mandataire gardent la trace des envois.
+Ce chapitre apprend à les lire.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Les sources réseau (section~\ref{sec:c13-sources}).
+    \item Exfiltration et pilotage (section~\ref{sec:c13-exfil}).
+    \item Les échanges suspects (section~\ref{sec:c13-suspects}).
+    \item La chronologie réseau (section~\ref{sec:c13-chrono}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Les Sources Réseau}
+\label{sec:c13-sources}
+% ============================================================================
+
+\begin{tableaucours}{L{3.6cm}L{8.6cm}}{%
+    \tableauHeader{Source} &
+    \tableauHeader{Ce qu'elle révèle}
+}
+Journaux de flux (pare-feu) & Qui parle à qui, quand, quel volume \\
+Journaux du mandataire web & Destinations web, volumes, pièces envoyées \\
+Journaux DNS & Noms résolus, dissimulation par DNS \\
+Journaux de messagerie & Courriels, pièces jointes, destinataires \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~13.1. Sources de traces réseau}\end{center}
+
+\begin{boxalert}
+\textbf{Contrainte du cours.} Le bureau d'analyse de NDAP SUKULU n'a pas
+d'outil de capture graphique.
+
+\smallskip
+\textbf{Règle~:} on travaille sur des \emph{journaux de flux exportés} (au
+format tableur), suffisants pour établir les faits et parfaitement opposables.
+La méthode prime sur l'outil.
+\end{boxalert}
+
+% ============================================================================
+\section{Exfiltration et Pilotage}
+\label{sec:c13-exfil}
+% ============================================================================
+
+Deux signatures réseau comptent~: l'\termecle{exfiltration} (un envoi sortant
+anormal vers une destination externe) et, dans les affaires d'intrusion, le
+\termecle{canal de pilotage} (petites connexions régulières commandant un code
+malveillant). Dans TSANAGA, on cherche surtout l'envoi du fichier clients.
+
+% ============================================================================
+\section{Les Échanges Suspects}
+\label{sec:c13-suspects}
+% ============================================================================
+
+Certains envois se dissimulent~: données glissées dans des requêtes DNS,
+transferts vers un service d'hébergement personnel, courriels à une adresse
+externe. L'analyste repère les destinations inhabituelles et les volumes qui
+ne correspondent pas à l'usage normal.
+
+% ============================================================================
+\section{La Chronologie Réseau}
+\label{sec:c13-chrono}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. L'envoi du 5 janvier}
+\textbf{Constatation.} Les journaux du mandataire montrent, le 5~janvier, un
+envoi de 18~Mo depuis le poste de M.~NDONGO vers un service d'hébergement
+personnel, deux jours après la copie sur clé.
+
+\medskip
+\textbf{Analyse} (confiance élevée pour l'envoi, moyenne pour le contenu).
+L'envoi est établi~; que son contenu soit le fichier clients est fortement
+probable (taille, date), mais se recoupe avec le disque. On date le fait, on
+qualifie la probabilité.
+\end{boxscenario}
+
+\begin{boxmetier}{Analyste forensique}
+\textbf{Suivre la donnée.} L'analyste trace le chemin de la donnée~: copiée
+sur une clé, envoyée par le réseau. Chaque canal laisse une trace~; les
+recouper reconstitue l'histoire complète de l'exfiltration.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{Flux, mandataire, DNS, messagerie}~: les sources réseau.
+    \item \textbf{Exfiltration} (envoi sortant) et \textbf{pilotage} (petites
+          connexions régulières).
+    \item \textbf{Des journaux de flux exportés} suffisent.
+    \item \textbf{Les échanges se dissimulent}~: destinations inhabituelles.
+    \item \textbf{On reconstitue} la chronologie et on recoupe.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: citer les sources réseau~;
+reconnaître exfiltration et pilotage~; lire des flux exportés~; repérer un
+échange suspect~; dater un envoi.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.1. Sources \niveaubase}]
+Quelle source révèle les pièces jointes envoyées par courriel~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.2. Exfiltration \niveaubase}]
+Quelle signature réseau trahit un envoi sortant anormal~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.3. Sans capture \niveaubase}]
+Pourquoi des journaux de flux exportés suffisent-ils~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.4. Dissimulation \niveaumoyen}]
+Comment des données peuvent-elles se dissimuler dans des requêtes DNS~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.5. TSANAGA \niveaumoyen}]
+Qu'établissent les journaux du mandataire le 5~janvier~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.6. Contenu \niveaumoyen}]
+Pourquoi l'envoi est-il « établi » mais son contenu « probable »~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.7. Recouper \niveaumoyen}]
+Comment recouper l'envoi réseau avec le disque~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.8. Destination \niveaumoyen}]
+Comment repère-t-on une destination inhabituelle dans les flux~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.9. Chronologie \niveauexpert}]
+Dressez la chronologie réseau de l'exfiltration dans TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~13.10. Chemin de la donnée \niveauexpert}]
+Reconstituez le chemin complet du fichier clients (clé et réseau).
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item RFC~3227~\cite{rfc3227}~; NIST SP~800-86~\cite{nist80086}~;
+          MITRE ATT\&CK~\cite{mitreattack}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} L'enquête se déplace vers la poche du suspect~: le
+Chapitre~\ref{chap:mobile} traite du forensique mobile.
+\end{boxinfo}

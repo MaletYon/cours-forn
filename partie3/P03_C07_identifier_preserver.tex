@@ -1,0 +1,208 @@
+% ============================================================================
+% Fichier  : partie3/P03_C07_identifier_preserver.tex : FORN (LPI342)
+% Sources : ISO/IEC 27037 ; RFC 3227 ; ACPO. Opération TSANAGA.
+% ============================================================================
+
+\chapter{Identifier et Préserver les Sources}
+\label{chap:preserver}
+\chaptermark{Identifier et préserver}
+
+\epigraph{%
+    « La preuve la plus solide est celle que l'on n'a pas abîmée\\
+    en voulant la regarder. »%
+}{Principe du cours}
+
+\niveauChapitre{Fondamental}{Partie~II.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Identifier les sources potentielles de preuve.
+    \item Préserver une scène numérique sans l'altérer.
+    \item Décider d'éteindre, de débrancher ou de capturer à chaud.
+    \item Protéger contre l'écriture (bloqueur).
+    \item Documenter l'état initial.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : devant l'ordinateur de M. NDONGO, faut-il l'éteindre, le débrancher, ou le laisser allumé ?}
+% ============================================================================
+
+Chaque geste sur un système vivant a un coût. Ce chapitre apprend à
+identifier les sources, à préserver la scène et à décider de la conduite à
+tenir selon l'état du support.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Les sources de preuve (section~\ref{sec:c07-sources}).
+    \item Préserver la scène (section~\ref{sec:c07-scene}).
+    \item Éteindre, débrancher ou capturer (section~\ref{sec:c07-decision}).
+    \item Protéger contre l'écriture (section~\ref{sec:c07-bloqueur}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Les Sources de Preuve}
+\label{sec:c07-sources}
+% ============================================================================
+
+\begin{tableaucours}{L{3.6cm}L{8.6cm}}{%
+    \tableauHeader{Source} &
+    \tableauHeader{Ce qu'elle peut contenir}
+}
+Disques et clés USB & Fichiers, fragments, artefacts, fichiers supprimés \\
+Mémoire vive & Processus, secrets, données non écrites \\
+Téléphones & Messages, applications, géolocalisation \\
+Équipements réseau & Journaux, flux, configurations \\
+Services en ligne & Comptes, journaux, sauvegardes \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~7.1. Sources potentielles de preuve}\end{center}
+
+% ============================================================================
+\section{Préserver la Scène}
+\label{sec:c07-scene}
+% ============================================================================
+
+\begin{boxprocedure}
+\textbf{Préserver une scène numérique}
+\begin{enumerate}
+    \item Photographier l'état initial (écran, branchements, voyants).
+    \item Ne toucher à rien avant d'avoir décidé et documenté.
+    \item Isoler des réseaux (éviter effacement ou verrouillage à distance).
+    \item Noter l'heure du système et l'heure réelle (écart).
+    \item Consigner chaque geste.
+\end{enumerate}
+\end{boxprocedure}
+
+% ============================================================================
+\section{Éteindre, Débrancher ou Capturer}
+\label{sec:c07-decision}
+% ============================================================================
+
+\begin{tableaucours}{L{3.2cm}L{4.6cm}L{4.4cm}}{%
+    \tableauHeader{État} &
+    \tableauHeader{Conduite} &
+    \tableauHeader{Raison}
+}
+Éteint & Ne pas allumer, acquérir le disque & L'allumage modifie le disque \\
+Allumé, données volatiles utiles & Capturer la mémoire d'abord & La mémoire meurt à l'extinction \\
+Allumé, risque de chiffrement & Éviter l'extinction brutale & Peut déclencher un verrouillage \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~7.2. Décider selon l'état du support}\end{center}
+
+\begin{boxalert}
+\textbf{Violation typique.} Allumer l'ordinateur éteint « juste pour voir ce
+qu'il contient ».
+
+\smallskip
+\textbf{Règle~:} allumer modifie des dizaines d'artefacts (dates d'accès,
+démarrage). On n'allume pas un support éteint~: on acquiert son disque. On ne
+touche au vivant que pour une raison documentée.
+\end{boxalert}
+
+% ============================================================================
+\section{Protéger contre l'Écriture}
+\label{sec:c07-bloqueur}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. Le bloqueur en écriture}
+\textbf{Constatation.} Pour lire le disque et la clé saisis, Mme~NKENG passe
+par un \termecle{bloqueur en écriture} (matériel ou logiciel), qui autorise la
+lecture mais interdit toute modification du support.
+
+\medskip
+\textbf{Analyse} (confiance élevée). Sans bloqueur, le simple branchement
+aurait pu écrire sur le support (horodatage, index). Le bloqueur garantit
+l'intégrité exigée pour la recevabilité (Chapitre~\ref{chap:recevabilite}).
+\end{boxscenario}
+
+\begin{boxmetier}{Analyste forensique}
+\textbf{Lire sans écrire.} L'analyste branche toujours un support de preuve
+derrière un bloqueur en écriture, et vérifie par condensat qu'il n'a rien
+modifié. C'est un réflexe, pas une option.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{Les sources}~: disques, mémoire, téléphones, réseau,
+          services.
+    \item \textbf{Préserver la scène}~: photographier, isoler, ne rien
+          toucher sans raison.
+    \item \textbf{Éteint}~: ne pas allumer. \textbf{Allumé}~: capturer la
+          mémoire d'abord.
+    \item \textbf{Un bloqueur en écriture} protège l'intégrité.
+    \item \textbf{On documente} l'état initial et chaque geste.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: citer les sources~;
+préserver une scène~; décider selon l'état~; utiliser un bloqueur~;
+documenter l'état initial.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.1. Sources \niveaubase}]
+Citez quatre sources potentielles de preuve.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.2. Éteint \niveaubase}]
+Que faire d'un ordinateur éteint~? Pourquoi~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.3. Bloqueur \niveaubase}]
+À quoi sert un bloqueur en écriture~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.4. Allumé \niveaumoyen}]
+Un ordinateur est allumé avec des données volatiles utiles. Que faire~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.5. Allumer \niveaumoyen}]
+Pourquoi n'allume-t-on pas un support éteint pour « voir »~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.6. Isoler \niveaumoyen}]
+Pourquoi isoler un support des réseaux dès la saisie~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.7. Chiffrement \niveaumoyen}]
+Pourquoi éviter l'extinction brutale d'un système peut-être chiffré~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.8. État initial \niveaumoyen}]
+Que consigne-t-on de l'état initial d'une scène~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.9. Procédure de saisie \niveauexpert}]
+Rédigez la procédure de saisie et de préservation pour TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~7.10. Fiche de décision \niveauexpert}]
+Concevez une fiche d'aide à la décision « éteint / allumé / chiffré ».
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27037~\cite{iso27037}~; RFC~3227~\cite{rfc3227}~;
+          ACPO~\cite{acpo2012}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Une fois le support préservé, on le duplique~: le
+Chapitre~\ref{chap:duplication} traite de la duplication et du hachage.
+\end{boxinfo}

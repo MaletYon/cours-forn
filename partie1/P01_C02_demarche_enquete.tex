@@ -1,0 +1,191 @@
+% ============================================================================
+% Fichier  : partie1/P01_C02_demarche_enquete.tex : FORN (LPI342)
+% Sources : ISO/IEC 27043 ; NIST SP 800-86 ; ACPO. Opération TSANAGA.
+% ============================================================================
+
+\chapter{La Démarche d'Enquête}
+\label{chap:demarche}
+\chaptermark{La démarche d'enquête}
+
+\epigraph{%
+    « Une enquête n'est pas une suite d'outils~;\\
+    c'est une suite de décisions documentées. »%
+}{Principe du cours}
+
+\niveauChapitre{Fondamental}{Chapitre~\ref{chap:forensique}.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Décrire les phases d'une enquête numérique.
+    \item Comprendre la planification et l'autorisation.
+    \item Situer identification, acquisition, analyse, restitution.
+    \item Distinguer constatation et interprétation.
+    \item Documenter chaque phase.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : par où commence une enquête sur les supports de M. NDONGO ?}
+% ============================================================================
+
+Devant les scellés, la tentation est d'« aller voir ». L'enquête impose un
+ordre~: planifier, identifier, acquérir, analyser, restituer. Ce chapitre
+pose cette démarche.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Les phases (section~\ref{sec:c02-phases}).
+    \item Planifier et autoriser (section~\ref{sec:c02-planifier}).
+    \item Constatation et interprétation (section~\ref{sec:c02-constat}).
+    \item Documenter (section~\ref{sec:c02-documenter}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Les Phases}
+\label{sec:c02-phases}
+% ============================================================================
+
+\begin{tableaucours}{L{3.4cm}L{8.8cm}}{%
+    \tableauHeader{Phase} &
+    \tableauHeader{Ce qu'on y fait}
+}
+Planifier & Cadre, autorisation, périmètre, outils \\
+Identifier & Repérer et préserver les sources de preuve \\
+Acquérir & Dupliquer, calculer les empreintes, tracer \\
+Analyser & Examiner la copie, interpréter, recouper \\
+Restituer & Rapport, présentation, conservation \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~2.1. Les phases d'une enquête~\cite{iso27043,nist80086}}\end{center}
+
+% ============================================================================
+\section{Planifier et Autoriser}
+\label{sec:c02-planifier}
+% ============================================================================
+
+\begin{boxjuris}
+Une enquête forensique suppose un fondement~: réquisition judiciaire, mandat,
+ou autorisation écrite du responsable pour une enquête interne. Au Cameroun,
+accéder à un support sans titre expose aux sanctions de la
+\loicam{loi n°~2010/012} (Chapitre~\ref{chap:droit}). On vérifie son titre
+avant d'agir.
+\end{boxjuris}
+
+% ============================================================================
+\section{Constatation et Interprétation}
+\label{sec:c02-constat}
+% ============================================================================
+
+\begin{boxalert}
+\textbf{Violation typique.} Écrire « M.~NDONGO a volé les données » dès la
+première trace.
+
+\smallskip
+\textbf{Règle~:} on constate (« le fichier clients a été copié sur une clé le
+3~janvier »), puis on interprète séparément, avec un niveau de confiance. Le
+rapport sépare toujours le fait établi de l'hypothèse.
+\end{boxalert}
+
+% ============================================================================
+\section{Documenter}
+\label{sec:c02-documenter}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. Le journal d'enquête}
+\textbf{Constatation.} Dès la réception des scellés, Mme~NKENG ouvre un
+journal d'enquête~: chaque acte y est horodaté, décrit, signé.
+
+\medskip
+\textbf{Analyse} (confiance élevée). Le journal n'est pas une formalité~:
+c'est lui qui rendra l'enquête reproductible et opposable. Une analyse non
+documentée, même exacte, sera contestée au tribunal.
+\end{boxscenario}
+
+\begin{boxmetier}{Enquêteur en cybercriminalité}
+\textbf{Suivre la démarche sous pression.} Même pressé par le parquet,
+l'enquêteur ne saute pas de phase~: planifier et identifier avant d'acquérir,
+acquérir avant d'analyser. L'ordre protège la preuve.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{Cinq phases}~: planifier, identifier, acquérir, analyser,
+          restituer.
+    \item \textbf{On vérifie son titre} avant d'agir.
+    \item \textbf{On constate, puis on interprète}, séparément.
+    \item \textbf{On documente} chaque acte dans un journal d'enquête.
+    \item \textbf{L'ordre des phases} protège la preuve.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: énoncer les phases~;
+expliquer le fondement d'une enquête~; séparer constatation et
+interprétation~; tenir un journal d'enquête.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.1. Les phases \niveaubase}]
+Citez les cinq phases d'une enquête numérique dans l'ordre.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.2. Le titre \niveaubase}]
+Quel fondement autorise l'enquête sur les supports de M.~NDONGO~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.3. Constat ou interprétation \niveaubase}]
+Classez~: « le fichier a été copié le 3~janvier »~; « M.~NDONGO est
+coupable ».
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.4. Sauter une phase \niveaumoyen}]
+Que risque-t-on à analyser avant d'acquérir~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.5. Journal \niveaumoyen}]
+Que consigne-t-on dans un journal d'enquête~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.6. Confiance \niveaumoyen}]
+Pourquoi assortir une interprétation d'un niveau de confiance~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.7. Pression \niveaumoyen}]
+Le parquet veut un résultat vite. Comment tenir la démarche~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.8. Reproductible \niveaumoyen}]
+Pourquoi une enquête doit-elle être reproductible~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.9. Plan d'enquête \niveauexpert}]
+Rédigez le plan d'enquête de l'opération TSANAGA, phase par phase.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~2.10. Modèle de journal \niveauexpert}]
+Concevez le modèle de journal d'enquête du cabinet NYONG SÉCURITÉ.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27043~\cite{iso27043}~; NIST SP~800-86~\cite{nist80086}~;
+          ACPO~\cite{acpo2012}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} La démarche n'a de valeur que portée par une éthique~:
+le Chapitre~\ref{chap:ethique} traite de la neutralité et de l'impartialité.
+\end{boxinfo}

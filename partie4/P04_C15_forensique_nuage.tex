@@ -1,0 +1,200 @@
+% ============================================================================
+% Fichier  : partie4/P04_C15_forensique_nuage.tex : FORN (LPI342)
+% Sources : ISO/IEC 27037, 27042 ; NIST (cloud). Opération TSANAGA.
+% ============================================================================
+
+\chapter{Forensique du Nuage et des Applications}
+\label{chap:nuage}
+\chaptermark{Forensique du nuage}
+
+\epigraph{%
+    « Dans le nuage, la preuve n'est pas chez vous~;\\
+    il faut la demander, dans les formes. »%
+}{Principe du cours}
+
+\niveauChapitre{Expert}{Chapitre~\ref{chap:mobile}~; notions de services en
+ligne.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Comprendre les défis du forensique dans le nuage.
+    \item Identifier les traces côté client et côté service.
+    \item Obtenir une preuve auprès d'un hébergeur, dans les formes.
+    \item Analyser les artefacts d'applications (réseaux sociaux, messageries).
+    \item Respecter le droit et la coopération internationale.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : le fichier a été envoyé vers un service d'hébergement. Comment en obtenir la preuve ?}
+% ============================================================================
+
+L'envoi du 5~janvier (Chapitre~\ref{chap:reseau}) pointe vers un service
+d'hébergement personnel, hébergé à l'étranger. La preuve n'est plus sur un
+support saisi, mais chez un tiers. Ce chapitre traite de ce cas.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Les défis du nuage (section~\ref{sec:c15-defis}).
+    \item Côté client, côté service (section~\ref{sec:c15-cotes}).
+    \item Obtenir dans les formes (section~\ref{sec:c15-obtenir}).
+    \item Les applications (section~\ref{sec:c15-apps}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Les Défis du Nuage}
+\label{sec:c15-defis}
+% ============================================================================
+
+Dans le nuage, la donnée est répartie, chez un tiers, souvent à l'étranger.
+L'enquêteur ne peut ni la saisir physiquement, ni l'imager comme un disque. Il
+doit la \emph{demander} au service, dans les formes légales, et composer avec
+la localisation des données et la coopération internationale.
+
+% ============================================================================
+\section{Côté Client, Côté Service}
+\label{sec:c15-cotes}
+% ============================================================================
+
+\begin{tableaucours}{L{3.6cm}L{8.6cm}}{%
+    \tableauHeader{Côté} &
+    \tableauHeader{Traces accessibles}
+}
+Client (le poste) & Fichiers de synchronisation, caches, jetons, historiques \\
+Service (l'hébergeur) & Comptes, journaux d'accès, fichiers, sauvegardes \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~15.1. Deux côtés de la preuve en nuage}\end{center}
+
+Souvent, le poste saisi garde déjà des traces du service (dossier de
+synchronisation, jeton d'accès), exploitables sans attendre le tiers.
+
+% ============================================================================
+\section{Obtenir dans les Formes}
+\label{sec:c15-obtenir}
+% ============================================================================
+
+\begin{boxjuris}
+Obtenir une preuve auprès d'un hébergeur étranger passe par les voies
+légales~: réquisition, coopération judiciaire internationale (Convention de
+Budapest), demande au point de contact du service. Accéder directement au
+compte, même avec un jeton trouvé, hors de ce cadre, exposerait à
+l'irrecevabilité et à l'illégalité.
+\end{boxjuris}
+
+\begin{boxalert}
+\textbf{Violation typique.} Se connecter au service avec un jeton d'accès
+trouvé sur le poste, pour « aller voir ».
+
+\smallskip
+\textbf{Règle~:} un jeton trouvé établit un lien~; il ne vaut pas autorisation
+d'accéder au service. On documente le jeton comme trace locale, et l'on
+obtient le contenu du service par la voie légale.
+\end{boxalert}
+
+% ============================================================================
+\section{Les Applications}
+\label{sec:c15-apps}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. La trace de synchronisation}
+\textbf{Constatation.} Sur le poste saisi, le dossier de synchronisation du
+service d'hébergement contient une copie locale du fichier clients et un
+journal de téléversement daté du 5~janvier.
+
+\medskip
+\textbf{Analyse} (confiance élevée). La trace locale, recevable (poste saisi,
+chaîne continue), établit le téléversement sans attendre l'hébergeur. La
+demande au service est engagée en parallèle, dans les formes, pour corroborer.
+\end{boxscenario}
+
+\begin{boxmetier}{Analyste forensique et juriste TIC}
+\textbf{Chercher d'abord côté client.} Avant d'engager une longue coopération
+internationale, l'analyste exploite les traces du service déjà présentes sur
+le poste saisi~: elles sont souvent suffisantes et immédiatement recevables.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{Le nuage}~: donnée répartie, chez un tiers, souvent à
+          l'étranger.
+    \item \textbf{Côté client}, le poste garde souvent des traces du service.
+    \item \textbf{Côté service}, on obtient dans les formes (réquisition,
+          Budapest).
+    \item \textbf{Un jeton trouvé} n'autorise pas l'accès au service.
+    \item \textbf{On exploite d'abord les traces locales}, recevables.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: expliquer les défis du
+nuage~; distinguer traces client et service~; obtenir une preuve dans les
+formes~; exploiter une trace locale~; respecter le droit.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.1. Défi \niveaubase}]
+Pourquoi ne peut-on pas imager une donnée dans le nuage comme un disque~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.2. Deux côtés \niveaubase}]
+Quelles traces trouve-t-on côté client~? Côté service~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.3. Jeton \niveaubase}]
+Un jeton trouvé autorise-t-il à se connecter au service~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.4. Dans les formes \niveaumoyen}]
+Par quelles voies obtient-on une preuve auprès d'un hébergeur étranger~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.5. TSANAGA \niveaumoyen}]
+Quelle trace locale établit le téléversement, sans attendre l'hébergeur~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.6. Budapest \niveaumoyen}]
+Quel rôle joue la Convention de Budapest ici~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.7. Synchronisation \niveaumoyen}]
+Pourquoi un dossier de synchronisation est-il précieux~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.8. Priorité \niveaumoyen}]
+Pourquoi exploiter d'abord les traces locales~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.9. Demande \niveauexpert}]
+Rédigez la demande de preuve adressée au service d'hébergement.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~15.10. Bilan domaines \niveauexpert}]
+Récapitulez ce que chaque domaine (disque, mémoire, réseau, mobile, nuage) a
+apporté à TSANAGA.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27037~\cite{iso27037}, 27042~\cite{iso27042}~;
+          Budapest~\cite{budapest2001}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Un suspect averti efface ses traces~: la Partie~V traite
+des défis, à commencer par l'anti-forensique
+(Chapitre~\ref{chap:anti}).
+\end{boxinfo}

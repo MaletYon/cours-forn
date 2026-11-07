@@ -1,0 +1,233 @@
+NDAP SUKULU · FORN · fiche FORN-FICHE-C01
+Chapitre 1 : Qu'est-ce que la forensique numérique
+
+Version papier, à utiliser en attendant l'ouverture du portail NDAP SUKULU.
+La fiche complète compte 40 questions. Répondez sur la grille en fin de fiche.
+Durée indicative : 60 minutes. Seuil de réussite : 60 %.
+Les corrections figurent dans le livret de correction du cours.
+
+========================================================================
+Questions à choix multiple (une seule bonne réponse)
+========================================================================
+
+ 1. L'investigation numérique est :
+      a) La démarche générale, tous contextes
+      b) Un sous-ensemble de la forensique
+      c) Un crime
+      d) Un outil
+
+ 2. La forensique numérique est :
+      a) La démarche générale
+      b) Le sous-ensemble à vocation probatoire
+      c) Un piratage
+      d) Une vente
+
+ 3. Le principe « tout contact laisse une trace » vient de :
+      a) Kahneman
+      b) Taleb
+      c) Locard
+      d) Turing
+
+ 4. Un domaine de la forensique est :
+      a) La paie
+      b) La météo
+      c) La vente
+      d) Le disque
+
+ 5. Le domaine qui traite les téléphones est :
+      a) Le mobile
+      b) Le disque
+      c) Le réseau
+      d) La paie
+
+ 6. La norme d'acquisition et de préservation est :
+      a) 27042
+      b) 27037
+      c) 27043
+      d) 27001
+
+ 7. La norme d'analyse et d'interprétation est :
+      a) 27037
+      b) 27043
+      c) 27042
+      d) 27001
+
+ 8. La norme des principes de l'investigation est :
+      a) 27037
+      b) 27042
+      c) 27001
+      d) 27043
+
+ 9. L'enquêteur se distingue par :
+      a) Sa méthode
+      b) Ses outils
+      c) Sa vitesse
+      d) Son prix
+
+10. M. BIKORO, devant l'ordinateur saisi, :
+      a) L'allume
+      b) Ne l'allume pas
+      c) Le vend
+      d) Le formate
+
+11. La criminalistique numérique insiste sur :
+      a) Le prix
+      b) La météo
+      c) La dimension scientifique
+      d) La vente
+
+12. La mémoire relève du domaine :
+      a) Disque
+      b) Réseau
+      c) Paie
+      d) Mémoire
+
+13. La forensique a un double ancrage :
+      a) Scientifique et juridique
+      b) Prix et météo
+      c) Vente et achat
+      d) Nord et sud
+
+14. Locard est une figure de :
+      a) La finance
+      b) La criminalistique
+      c) L'informatique seule
+      d) La vente
+
+15. La méthode donne au travail une valeur :
+      a) Marchande
+      b) Nulle
+      c) Probante
+      d) Secrète
+
+16. Le nuage et les applications forment :
+      a) Un domaine
+      b) La météo
+      c) Un outil
+      d) La paie
+
+17. « Recherche de la preuve » désigne :
+      a) Le prix
+      b) La finalité juridique
+      c) La météo
+      d) La vente
+
+18. Ne pas allumer évite d'altérer :
+      a) La paie
+      b) Les artefacts
+      c) La météo
+      d) La vente
+
+19. Un guide de bonnes pratiques de la preuve est :
+      a) L'ACPO
+      b) La météo
+      c) La paie
+      d) La vente
+
+20. L'opération TSANAGA mobilise :
+      a) Un seul domaine
+      b) Aucun
+      c) La paie
+      d) Plusieurs domaines
+
+========================================================================
+Vrai ou faux
+========================================================================
+
+21. La forensique numérique est l'investigation à vocation probatoire.
+      Vrai / Faux
+
+22. Le principe « tout contact laisse une trace » vient de Locard.
+      Vrai / Faux
+
+23. L'ISO/IEC 27037 porte sur l'analyse et l'interprétation.
+      Vrai / Faux
+
+24. L'enquêteur se distingue surtout par sa vitesse.
+      Vrai / Faux
+
+25. M. BIKORO n'allume pas l'ordinateur saisi.
+      Vrai / Faux
+
+26. Le mobile est un domaine de la forensique numérique.
+      Vrai / Faux
+
+27. L'ISO/IEC 27043 porte sur les principes de l'investigation.
+      Vrai / Faux
+
+28. L'investigation numérique est un sous-ensemble de la forensique.
+      Vrai / Faux
+
+29. La forensique a un double ancrage, scientifique et juridique.
+      Vrai / Faux
+
+30. La méthode donne au travail de l'enquêteur une valeur marchande.
+      Vrai / Faux
+
+========================================================================
+Textes à trous
+========================================================================
+
+31. « Tout contact laisse une ______ » (Locard).
+
+32. La forensique numérique est l'investigation à vocation ______.
+
+33. La norme d'acquisition et de préservation est l'ISO/IEC ______.
+
+34. La norme d'analyse et d'interprétation est l'ISO/IEC ______.
+
+35. Le domaine qui traite les téléphones est le ______.
+
+36. L'enquêteur se distingue par sa ______.
+
+37. Ne pas ______ l'ordinateur évite d'altérer les artefacts.
+
+38. Un guide de bonnes pratiques de la preuve numérique est l'______.
+
+39. Le disque, la mémoire, le réseau, le mobile et le ______ sont les domaines.
+
+40. Locard est une figure de la ______ numérique.
+
+========================================================================
+Grille de réponses   Nom : ............................  Matricule : ............
+========================================================================
+ 1. ............................................
+ 2. ............................................
+ 3. ............................................
+ 4. ............................................
+ 5. ............................................
+ 6. ............................................
+ 7. ............................................
+ 8. ............................................
+ 9. ............................................
+10. ............................................
+11. ............................................
+12. ............................................
+13. ............................................
+14. ............................................
+15. ............................................
+16. ............................................
+17. ............................................
+18. ............................................
+19. ............................................
+20. ............................................
+21. ............................................
+22. ............................................
+23. ............................................
+24. ............................................
+25. ............................................
+26. ............................................
+27. ............................................
+28. ............................................
+29. ............................................
+30. ............................................
+31. ............................................
+32. ............................................
+33. ............................................
+34. ............................................
+35. ............................................
+36. ............................................
+37. ............................................
+38. ............................................
+39. ............................................
+40. ............................................

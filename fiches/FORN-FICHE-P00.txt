@@ -1,0 +1,233 @@
+NDAP SUKULU · FORN · fiche FORN-FICHE-P00
+Chapitre 0 : Prologue : la scène numérique
+
+Version papier, à utiliser en attendant l'ouverture du portail NDAP SUKULU.
+La fiche complète compte 40 questions. Répondez sur la grille en fin de fiche.
+Durée indicative : 60 minutes. Seuil de réussite : 60 %.
+Les corrections figurent dans le livret de correction du cours.
+
+========================================================================
+Questions à choix multiple (une seule bonne réponse)
+========================================================================
+
+ 1. La forensique numérique vise à :
+      a) Établir et prouver
+      b) Nuire
+      c) Vendre
+      d) Pirater
+
+ 2. L'enquêteur, face à la trace, la :
+      a) Efface
+      b) Préserve
+      c) Vend
+      d) Ignore
+
+ 3. La posture de l'enquêteur est :
+      a) Partisane
+      b) Agressive
+      c) Neutre et impartiale
+      d) Secrète
+
+ 4. Le principe de Locard énonce :
+      a) Rien ne se perd
+      b) Tout se chiffre
+      c) Tout se vend
+      d) Tout contact laisse une trace
+
+ 5. L'opération du fil rouge s'appelle :
+      a) TSANAGA
+      b) LOGONE
+      c) BÉNOUÉ
+      d) MAYO
+
+ 6. Le mis en cause est un ancien employé de :
+      a) NYONG
+      b) LiZbiZ
+      c) ANTIC
+      d) BANQUE SANAGA
+
+ 7. Les supports saisis sont remis à :
+      a) LiZbiZ
+      b) La presse
+      c) NYONG SÉCURITÉ
+      d) Un concurrent
+
+ 8. Le O du Trilemme CRO désigne :
+      a) L'origine
+      b) L'ordre
+      c) L'objet
+      d) L'opposabilité
+
+ 9. Le F du Trilemme CRO désigne :
+      a) La fiabilité
+      b) La force
+      c) La fréquence
+      d) La finalité
+
+10. La chaîne de possession commence :
+      a) À l'analyse
+      b) À la saisie
+      c) Au tribunal
+      d) Jamais
+
+11. Le pirate, lui, cherche à :
+      a) Prouver
+      b) Préserver
+      c) Accéder et nuire
+      d) Documenter
+
+12. L'enquêteur documente :
+      a) Rien
+      b) Le prix
+      c) La météo
+      d) Chaque geste
+
+13. On calcule les empreintes :
+      a) Avant toute analyse
+      b) Après l'analyse
+      c) Jamais
+      d) Au hasard
+
+14. TSANAGA est une enquête menée pour :
+      a) Le parquet
+      b) La presse
+      c) Un concurrent
+      d) La météo
+
+15. Le C du Trilemme CRO désigne :
+      a) Le coût
+      b) Le contrôle
+      c) La confidentialité
+      d) La couleur
+
+16. Allumer l'ordinateur saisi « pour voir » est :
+      a) Recommandé
+      b) Obligatoire
+      c) Neutre
+      d) À proscrire
+
+17. Un ordinateur saisi est d'abord :
+      a) Photographié scellé
+      b) Allumé
+      c) Vendu
+      d) Formaté
+
+18. Établir et prouver sont :
+      a) Contradictoires
+      b) La double exigence
+      c) Inutiles
+      d) Secrets
+
+19. Une rupture de la chaîne rend la pièce :
+      a) Plus forte
+      b) Chère
+      c) Contestable
+      d) Belle
+
+20. Le mis en cause aurait revendu :
+      a) Un logiciel
+      b) Un camion
+      c) La météo
+      d) Le fichier des clients
+
+========================================================================
+Vrai ou faux
+========================================================================
+
+21. La forensique numérique vise à établir et prouver.
+      Vrai / Faux
+
+22. Le principe de Locard : tout contact laisse une trace.
+      Vrai / Faux
+
+23. La chaîne de possession commence à l'analyse, pas à la saisie.
+      Vrai / Faux
+
+24. L'opération du fil rouge s'appelle TSANAGA.
+      Vrai / Faux
+
+25. L'enquêteur efface les traces comme un pirate.
+      Vrai / Faux
+
+26. Le O du Trilemme CRO désigne l'opposabilité.
+      Vrai / Faux
+
+27. On allume un ordinateur saisi pour voir ce qu'il contient.
+      Vrai / Faux
+
+28. Le mis en cause aurait revendu un camion de l'entreprise.
+      Vrai / Faux
+
+29. Une rupture de la chaîne de possession renforce la pièce.
+      Vrai / Faux
+
+30. Établir et prouver sont la double exigence de l'enquête.
+      Vrai / Faux
+
+========================================================================
+Textes à trous
+========================================================================
+
+31. « Tout contact laisse une ______ » (Locard).
+
+32. L'opération du fil rouge s'appelle ______.
+
+33. Le Trilemme CRO : Confidentialité, Fiabilité, ______.
+
+34. La chaîne de ______ commence à la saisie.
+
+35. La posture de l'enquêteur est neutre et ______.
+
+36. Les supports saisis sont remis au cabinet NYONG ______.
+
+37. La forensique vise à établir et ______.
+
+38. On calcule les ______ avant toute analyse.
+
+39. Le F du Trilemme CRO désigne la ______.
+
+40. On ne doit pas ______ un ordinateur saisi pour voir.
+
+========================================================================
+Grille de réponses   Nom : ............................  Matricule : ............
+========================================================================
+ 1. ............................................
+ 2. ............................................
+ 3. ............................................
+ 4. ............................................
+ 5. ............................................
+ 6. ............................................
+ 7. ............................................
+ 8. ............................................
+ 9. ............................................
+10. ............................................
+11. ............................................
+12. ............................................
+13. ............................................
+14. ............................................
+15. ............................................
+16. ............................................
+17. ............................................
+18. ............................................
+19. ............................................
+20. ............................................
+21. ............................................
+22. ............................................
+23. ............................................
+24. ............................................
+25. ............................................
+26. ............................................
+27. ............................................
+28. ............................................
+29. ............................................
+30. ............................................
+31. ............................................
+32. ............................................
+33. ............................................
+34. ............................................
+35. ............................................
+36. ............................................
+37. ............................................
+38. ............................................
+39. ............................................
+40. ............................................

@@ -1,0 +1,233 @@
+NDAP SUKULU · FORN · fiche FORN-FICHE-C10
+Chapitre 10 : Forensique disque et systèmes de fichiers
+
+Version papier, à utiliser en attendant l'ouverture du portail NDAP SUKULU.
+La fiche complète compte 40 questions. Répondez sur la grille en fin de fiche.
+Durée indicative : 60 minutes. Seuil de réussite : 60 %.
+Les corrections figurent dans le livret de correction du cours.
+
+========================================================================
+Questions à choix multiple (une seule bonne réponse)
+========================================================================
+
+ 1. Un disque se divise en :
+      a) Partitions
+      b) Prix
+      c) Météo
+      d) Ventes
+
+ 2. Une partition est formatée avec un :
+      a) Prix
+      b) Système de fichiers
+      c) Marché
+      d) Nuage
+
+ 3. NTFS est le système de :
+      a) Linux
+      b) La paie
+      c) Windows
+      d) La météo
+
+ 4. EXT est le système de :
+      a) Windows
+      b) La paie
+      c) La météo
+      d) Linux
+
+ 5. Le plus riche pour l'enquête est :
+      a) NTFS
+      b) FAT
+      c) La vente
+      d) La météo
+
+ 6. Un fichier porte des dates de création, modification et :
+      a) Vente
+      b) Accès
+      c) Météo
+      d) Prix
+
+ 7. Un horodatage prouve un changement, non :
+      a) La date
+      b) Le prix
+      c) L'auteur
+      d) La météo
+
+ 8. L'espace non alloué garde :
+      a) Rien
+      b) Le prix
+      c) La météo
+      d) Ce qu'on croyait effacé
+
+ 9. Les artefacts NTFS montrent la copie vers :
+      a) Un amovible
+      b) Un nuage
+      c) La météo
+      d) Le marché
+
+10. La copie a eu lieu le :
+      a) 6 mars
+      b) 3 janvier
+      c) 5 janvier
+      d) 1er mars
+
+11. FAT/exFAT équipe souvent :
+      a) Les serveurs
+      b) La paie
+      c) Les clés USB
+      d) La météo
+
+12. On lit les horodatages avec :
+      a) Certitude
+      b) Vente
+      c) Météo
+      d) Prudence
+
+13. Une partition cachée est :
+      a) Un indice
+      b) Normale
+      c) Chère
+      d) Belle
+
+14. NTFS offre un journal et des horodatages :
+      a) Uniques
+      b) Multiples
+      c) Vendus
+      d) Secrets
+
+15. La date de modification dit qu'un fichier a :
+      a) Été vendu
+      b) Été chiffré
+      c) Changé
+      d) Été payé
+
+16. L'identité de l'auteur se :
+      a) Affirme
+      b) Vend
+      c) Chiffre
+      d) Recoupe
+
+17. Une image bit à bit capture l'espace :
+      a) Non alloué aussi
+      b) Alloué seul
+      c) De vente
+      d) De météo
+
+18. Dans EXT, on examine les :
+      a) Prix
+      b) Inodes
+      c) Météos
+      d) Ventes
+
+19. « WinUpd32 installé le 1er mars » est un :
+      a) Déduit
+      b) Prix
+      c) Tracé
+      d) Avis
+
+20. La richesse des traces dépend du système de :
+      a) Vente
+      b) Météo
+      c) Prix
+      d) Fichiers
+
+========================================================================
+Vrai ou faux
+========================================================================
+
+21. Un disque se divise en partitions formatées avec un système de fichiers.
+      Vrai / Faux
+
+22. NTFS est plus riche que FAT pour l'enquête.
+      Vrai / Faux
+
+23. Un horodatage de modification désigne l'auteur du changement.
+      Vrai / Faux
+
+24. L'espace non alloué garde ce qu'on croyait effacé.
+      Vrai / Faux
+
+25. La copie de clients.xlsx a eu lieu le 3 janvier.
+      Vrai / Faux
+
+26. On lit les horodatages avec prudence.
+      Vrai / Faux
+
+27. EXT est le système de fichiers de Windows.
+      Vrai / Faux
+
+28. Une partition cachée est un indice à examiner.
+      Vrai / Faux
+
+29. FAT offre plus d'horodatages et un journal plus riche que NTFS.
+      Vrai / Faux
+
+30. Une image bit à bit capture aussi l'espace non alloué.
+      Vrai / Faux
+
+========================================================================
+Textes à trous
+========================================================================
+
+31. Un disque se divise en ______.
+
+32. NTFS est le système de fichiers de ______.
+
+33. EXT est le système de fichiers de ______.
+
+34. Un horodatage prouve un changement, non l'______.
+
+35. La copie de clients.xlsx a eu lieu le ______ janvier.
+
+36. L'espace non ______ garde ce qu'on croyait effacé.
+
+37. On lit les horodatages avec ______.
+
+38. Le système de fichiers le plus riche pour l'enquête est ______.
+
+39. Une partition ______ est un indice.
+
+40. Dans EXT, on examine les ______.
+
+========================================================================
+Grille de réponses   Nom : ............................  Matricule : ............
+========================================================================
+ 1. ............................................
+ 2. ............................................
+ 3. ............................................
+ 4. ............................................
+ 5. ............................................
+ 6. ............................................
+ 7. ............................................
+ 8. ............................................
+ 9. ............................................
+10. ............................................
+11. ............................................
+12. ............................................
+13. ............................................
+14. ............................................
+15. ............................................
+16. ............................................
+17. ............................................
+18. ............................................
+19. ............................................
+20. ............................................
+21. ............................................
+22. ............................................
+23. ............................................
+24. ............................................
+25. ............................................
+26. ............................................
+27. ............................................
+28. ............................................
+29. ............................................
+30. ............................................
+31. ............................................
+32. ............................................
+33. ............................................
+34. ............................................
+35. ............................................
+36. ............................................
+37. ............................................
+38. ............................................
+39. ............................................
+40. ............................................

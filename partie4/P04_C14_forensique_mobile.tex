@@ -1,0 +1,198 @@
+% ============================================================================
+% Fichier  : partie4/P04_C14_forensique_mobile.tex : FORN (LPI342)
+% Sources : NIST SP 800-101r1 ; ISO/IEC 27037. Opération TSANAGA.
+% ============================================================================
+
+\chapter{Forensique Mobile}
+\label{chap:mobile}
+\chaptermark{Forensique mobile}
+
+\epigraph{%
+    « Le téléphone est le témoin qui ne quitte jamais son propriétaire. »%
+}{Principe du cours}
+
+\niveauChapitre{Intermédiaire à expert}{Chapitre~\ref{chap:disque}~; notions
+de systèmes mobiles.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Comprendre les spécificités de l'enquête sur smartphone.
+    \item Identifier les traces (messages, applications, géolocalisation).
+    \item Connaître les niveaux d'extraction.
+    \item Respecter le cadre juridique du mobile.
+    \item Qualifier un artefact mobile.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : le téléphone de M. NDONGO confirme-t-il la revente des données ?}
+% ============================================================================
+
+Le téléphone saisi peut contenir messages, contacts, et traces de
+négociation. L'enquête mobile obéit à des règles propres. Ce chapitre les
+présente.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Les spécificités du mobile (section~\ref{sec:c14-spec}).
+    \item Les traces mobiles (section~\ref{sec:c14-traces}).
+    \item Les niveaux d'extraction (section~\ref{sec:c14-extraction}).
+    \item Le cadre juridique (section~\ref{sec:c14-droit}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Les Spécificités du Mobile}
+\label{sec:c14-spec}
+% ============================================================================
+
+Un smartphone diffère d'un ordinateur~: stockage chiffré par défaut,
+verrouillage, connexion permanente (risque d'effacement à distance),
+diversité des systèmes (Android, iOS). On l'isole des réseaux dès la saisie
+(mode avion, sachet de blindage) pour éviter l'effacement.
+
+% ============================================================================
+\section{Les Traces Mobiles}
+\label{sec:c14-traces}
+% ============================================================================
+
+\begin{tableaucours}{L{3.6cm}L{8.6cm}}{%
+    \tableauHeader{Trace} &
+    \tableauHeader{Ce qu'elle révèle}
+}
+Messages & SMS, messageries, conversations \\
+Journaux d'appels & Qui, quand, combien de temps \\
+Applications & Données locales, historiques, pièces jointes \\
+Géolocalisation & Lieux fréquentés, déplacements \\
+Métadonnées de photos & Date, lieu de prise de vue \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~14.1. Traces d'un smartphone~\cite{nist800101}}\end{center}
+
+% ============================================================================
+\section{Les Niveaux d'Extraction}
+\label{sec:c14-extraction}
+% ============================================================================
+
+\begin{tableaucours}{L{3.6cm}L{8.6cm}}{%
+    \tableauHeader{Niveau} &
+    \tableauHeader{Portée}
+}
+Manuel & Lecture à l'écran, photographiée~; limité, mais simple \\
+Logique & Données accessibles par l'interface (messages, contacts) \\
+Physique & Copie bas niveau~; plus complet, plus complexe \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~14.2. Niveaux d'extraction mobile}\end{center}
+
+% ============================================================================
+\section{Le Cadre Juridique}
+\label{sec:c14-droit}
+% ============================================================================
+
+\begin{boxCRO}
+\textbf{Le mobile, intime par nature.} Un téléphone contient la vie privée
+entière de son propriétaire~: messages intimes, santé, famille. L'examiner
+sans limite dégrade la \cro{-}{0}{0}. On s'en tient strictement au périmètre
+de la réquisition et l'on protège les tiers (correspondants).
+\end{boxCRO}
+
+\begin{boxscenario}{Opération TSANAGA. Les messages de négociation}
+\textbf{Constatation.} L'extraction logique du téléphone, dans le périmètre,
+révèle des messages datés de janvier évoquant la remise d'un « fichier » contre
+paiement, à un contact extérieur.
+
+\medskip
+\textbf{Analyse} (confiance élevée pour les messages, moyenne pour leur
+portée exacte). Les messages corroborent fortement la revente~; leur
+interprétation précise (quel fichier, quel montant) se recoupe avec le disque
+et le réseau. On rapporte les messages, à charge et à décharge.
+\end{boxscenario}
+
+\begin{boxmetier}{Enquêteur en cybercriminalité et expert judiciaire}
+\textbf{Isoler, puis extraire dans le périmètre.} L'enquêteur isole le
+téléphone des réseaux dès la saisie, choisit le niveau d'extraction adapté, et
+limite l'examen au périmètre. Le respect de l'intimité conditionne la
+recevabilité.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{Le mobile} est chiffré, verrouillé, connecté~: on l'isole.
+    \item \textbf{Les traces}~: messages, appels, applications,
+          géolocalisation.
+    \item \textbf{Trois niveaux d'extraction}~: manuel, logique, physique.
+    \item \textbf{Le mobile est intime}~: on s'en tient au périmètre.
+    \item \textbf{On recoupe} avec le disque et le réseau.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: expliquer les spécificités
+du mobile~; citer les traces~; distinguer les niveaux d'extraction~; respecter
+le périmètre~; qualifier un artefact mobile.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.1. Spécificités \niveaubase}]
+Pourquoi isole-t-on un téléphone des réseaux dès la saisie~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.2. Traces \niveaubase}]
+Citez quatre traces d'un smartphone.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.3. Niveaux \niveaubase}]
+Distinguez extraction logique et physique.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.4. Effacement \niveaumoyen}]
+Quel risque court un téléphone resté connecté après la saisie~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.5. Intimité \niveaumoyen}]
+Pourquoi le mobile exige-t-il une attention particulière à l'intimité~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.6. TSANAGA \niveaumoyen}]
+Que révèle l'extraction logique du téléphone de M.~NDONGO~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.7. Géolocalisation \niveaumoyen}]
+Que peut apporter la géolocalisation à l'enquête~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.8. Tiers \niveaumoyen}]
+Comment protéger les correspondants dont les messages figurent sur le
+téléphone~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.9. Procédure \niveauexpert}]
+Rédigez la procédure de saisie et d'extraction mobile pour TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~14.10. Faisceau \niveauexpert}]
+Intégrez les messages mobiles au faisceau d'indices de l'affaire.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item NIST SP~800-101r1~\cite{nist800101}~; ISO/IEC 27037~\cite{iso27037}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Les données vivent aussi hors de l'appareil~: le
+Chapitre~\ref{chap:nuage} traite du forensique du nuage et des applications.
+\end{boxinfo}

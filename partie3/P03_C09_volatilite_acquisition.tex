@@ -1,0 +1,203 @@
+% ============================================================================
+% Fichier  : partie3/P03_C09_volatilite_acquisition.tex : FORN (LPI342)
+% Sources : RFC 3227 ; NIST SP 800-86 ; ISO/IEC 27037. Opération TSANAGA.
+% ============================================================================
+
+\chapter{Ordre de Volatilité et Acquisition à Chaud}
+\label{chap:acquisition}
+\chaptermark{Volatilité et acquisition à chaud}
+
+\epigraph{%
+    « On capture d'abord ce qui s'efface le plus vite. »%
+}{Principe du cours}
+
+\niveauChapitre{Intermédiaire à expert}{Chapitre~\ref{chap:duplication}.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Énoncer l'ordre de volatilité.
+    \item Décider quand acquérir à chaud.
+    \item Capturer la mémoire vive et l'état du système.
+    \item Mesurer l'empreinte de l'acquisition à chaud.
+    \item Documenter un arbitrage CRO.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : sur un système allumé, par quoi commencer l'acquisition ?}
+% ============================================================================
+
+Sur un système vivant, certaines traces (mémoire, connexions) disparaissent à
+l'extinction, d'autres (disque) sont stables. L'ordre de volatilité fixe la
+priorité. Ce chapitre l'applique.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item L'ordre de volatilité (section~\ref{sec:c09-volatilite}).
+    \item L'acquisition à chaud (section~\ref{sec:c09-chaud}).
+    \item Capturer la mémoire (section~\ref{sec:c09-memoire}).
+    \item L'arbitrage CRO (section~\ref{sec:c09-cro}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{L'Ordre de Volatilité}
+\label{sec:c09-volatilite}
+% ============================================================================
+
+\begin{boxprocedure}
+\textbf{Acquérir selon l'ordre de volatilité (RFC 3227)}
+\begin{enumerate}
+    \item Mémoire vive et état (processus, connexions, utilisateurs).
+    \item Fichiers temporaires, données de session.
+    \item Disque (image bit à bit).
+    \item Journaux distants, configurations.
+    \item Supports d'archives.
+\end{enumerate}
+\end{boxprocedure}
+
+% ============================================================================
+\section{L'Acquisition à Chaud}
+\label{sec:c09-chaud}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Acquisition à chaud}~: capture de données sur un système en
+fonctionnement, avant son extinction. Nécessaire pour la mémoire et l'état
+vivant, elle laisse inévitablement une empreinte sur le système, qu'on
+minimise et documente.
+\end{boxdef}
+
+\begin{boxalert}
+\textbf{Violation typique.} Éteindre un système allumé « pour le mettre sous
+scellé » sans capturer la mémoire.
+
+\smallskip
+\textbf{Règle~:} si des données volatiles sont utiles (session chiffrée
+ouverte, connexions, secrets en clair), on les capture d'abord. Éteindre sans
+réfléchir détruit une preuve unique.
+\end{boxalert}
+
+% ============================================================================
+\section{Capturer la Mémoire}
+\label{sec:c09-memoire}
+% ============================================================================
+
+On capture la mémoire avec un outil à empreinte minimale, documenté, en
+écrivant sur un support externe, puis on calcule le condensat de la capture.
+La mémoire révèle ce que le disque ignore~: processus, connexions, clés de
+chiffrement en clair.
+
+% ============================================================================
+\section{L'Arbitrage CRO}
+\label{sec:c09-cro}
+% ============================================================================
+
+\begin{boxCRO}
+\textbf{L'acquisition à chaud, un arbitrage.} Toucher au vivant laisse une
+empreinte~: \cro{0}{-}{+}. On accepte une légère altération (fiabilité) pour
+sauver une trace unique et opposable (opposabilité), et on la documente pour
+la rendre défendable. Le choix se justifie et se trace.
+\end{boxCRO}
+
+\begin{boxscenario}{Opération TSANAGA. Une session chiffrée ouverte}
+\textbf{Constatation.} À la saisie, l'ordinateur de M.~NDONGO était allumé,
+avec un conteneur chiffré monté (déchiffré en mémoire).
+
+\medskip
+\textbf{Analyse} (confiance élevée). Éteindre aurait reverrouillé le
+conteneur, rendant l'accès très difficile. L'équipe a capturé la mémoire à
+chaud (où la clé était en clair), puis acquis le disque. L'arbitrage, risqué,
+a été documenté et justifié.
+\end{boxscenario}
+
+\begin{boxmetier}{Analyste forensique}
+\textbf{Décider vite, tracer tout.} Sur une scène vivante, l'analyste décide
+en minutes, mais documente chaque choix~: pourquoi capturer à chaud, avec
+quel outil, à quelle heure. La trace de la décision vaut autant que la
+capture.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{L'ordre de volatilité}~: mémoire, puis disque, puis
+          archives.
+    \item \textbf{L'acquisition à chaud} sauve les traces volatiles, en
+          laissant une empreinte.
+    \item \textbf{On capture la mémoire} avant l'extinction, si elle est
+          utile.
+    \item \textbf{L'arbitrage CRO} se justifie et se documente.
+    \item \textbf{Une session chiffrée ouverte} change la décision.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: énoncer l'ordre de
+volatilité~; décider d'acquérir à chaud~; capturer la mémoire~; analyser le
+CRO de l'acquisition~; documenter l'arbitrage.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.1. Volatilité \niveaubase}]
+Classez du plus volatil au plus stable~: disque, mémoire, archives.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.2. À chaud \niveaubase}]
+Qu'est-ce qu'une acquisition à chaud~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.3. Support \niveaubase}]
+Sur quel support écrit-on une capture mémoire~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.4. Éteindre \niveaumoyen}]
+Pourquoi ne pas éteindre un système allumé avant de capturer la mémoire~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.5. Conteneur chiffré \niveaumoyen}]
+Pourquoi la session chiffrée ouverte change-t-elle la décision~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.6. CRO \niveaumoyen}]
+Expliquez l'arbitrage CRO de l'acquisition à chaud.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.7. Empreinte \niveaumoyen}]
+Pourquoi documenter l'empreinte laissée par l'outil d'acquisition~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.8. Ce que révèle la mémoire \niveaumoyen}]
+Citez trois éléments que la mémoire révèle et que le disque ignore.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.9. Procédure \niveauexpert}]
+Rédigez la procédure d'acquisition à chaud de l'ordinateur de TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~9.10. Justification \niveauexpert}]
+Rédigez la note qui justifie l'acquisition à chaud devant le tribunal.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item RFC~3227~\cite{rfc3227}~; NIST SP~800-86~\cite{nist80086}~;
+          ISO/IEC 27037~\cite{iso27037}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} L'acquisition faite, l'analyse commence~: la Partie~IV
+parcourt les domaines, à commencer par le disque
+(Chapitre~\ref{chap:disque}).
+\end{boxinfo}

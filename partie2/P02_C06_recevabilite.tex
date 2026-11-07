@@ -1,0 +1,201 @@
+% ============================================================================
+% Fichier  : partie2/P02_C06_recevabilite.tex : FORN (LPI342)
+% Sources : ISO/IEC 27037, 27042 ; ACPO ; principes de la preuve.
+% ============================================================================
+
+\chapter{Recevabilité et Admissibilité}
+\label{chap:recevabilite}
+\chaptermark{Recevabilité et admissibilité}
+
+\epigraph{%
+    « Une vérité que l'on ne peut pas défendre\\
+    n'entre pas dans un prétoire. »%
+}{Principe du cours}
+
+\niveauChapitre{Intermédiaire}{Chapitres~\ref{chap:droit} et~\ref{chap:custody}.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Définir la recevabilité d'une preuve numérique.
+    \item Connaître ses conditions (licéité, intégrité, authenticité, traçabilité).
+    \item Comprendre les quatre principes de l'ACPO.
+    \item Relier la recevabilité au Trilemme CRO.
+    \item Reconnaître ce qui rend une preuve irrecevable.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : qu'est-ce qui rend une preuve numérique recevable, ou irrecevable, devant la justice ?}
+% ============================================================================
+
+Une preuve peut être exacte et pourtant écartée~: obtenue sans titre,
+altérée, non traçable. Ce chapitre pose les conditions de la recevabilité et
+les principes qui la garantissent.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Définir la recevabilité (section~\ref{sec:c06-definir}).
+    \item Les conditions (section~\ref{sec:c06-conditions}).
+    \item Les principes de l'ACPO (section~\ref{sec:c06-acpo}).
+    \item Ce qui rend irrecevable (section~\ref{sec:c06-irrecevable}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Définir la Recevabilité}
+\label{sec:c06-definir}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Recevabilité}~: aptitude d'une preuve à être admise et prise en
+compte par la justice. Elle tient à la \emph{manière} dont la preuve a été
+obtenue, préservée et documentée, non à sa seule exactitude.
+\end{boxdef}
+
+% ============================================================================
+\section{Les Conditions}
+\label{sec:c06-conditions}
+% ============================================================================
+
+\begin{tableaucours}{L{3.2cm}L{9.0cm}}{%
+    \tableauHeader{Condition} &
+    \tableauHeader{Exigence}
+}
+Licéité & Obtenue avec un titre (réquisition, mandat, autorisation) \\
+Intégrité & Non altérée depuis l'acquisition (condensat) \\
+Authenticité & Bien ce qu'elle prétend être, de la source déclarée \\
+Traçabilité & Chaîne de possession continue, actes documentés \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~6.1. Conditions de la recevabilité}\end{center}
+
+% ============================================================================
+\section{Les Principes de l'ACPO}
+\label{sec:c06-acpo}
+% ============================================================================
+
+\begin{boxprocedure}
+\textbf{Les quatre principes de l'ACPO}
+\begin{enumerate}
+    \item Ne pas modifier les données originales.
+    \item En cas d'accès nécessaire à l'original, être compétent et expliquer
+          l'incidence de ses actes.
+    \item Tracer tous les actes~: un tiers doit pouvoir les reproduire et
+          obtenir le même résultat.
+    \item Le responsable de l'enquête garantit le respect du droit et de ces
+          principes.
+\end{enumerate}
+\end{boxprocedure}
+
+% ============================================================================
+\section{Ce qui Rend Irrecevable}
+\label{sec:c06-irrecevable}
+% ============================================================================
+
+\begin{boxCRO}
+\textbf{La recevabilité est l'opposabilité.} La dimension O du Trilemme est la
+recevabilité~; la F (fiabilité) recouvre intégrité et authenticité~; la C
+(confidentialité) impose la proportionnalité. Une preuve bien conduite vise
+\cro{0}{+}{+}.
+\end{boxCRO}
+
+\begin{boxscenario}{Opération TSANAGA. Deux pièces, deux sorts}
+\textbf{Constatation.} L'ordinateur, acquis selon l'ISO/IEC 27037, à la
+chaîne continue, est recevable. La clé USB, dont la chaîne présente un trou
+(Chapitre~\ref{chap:custody}), est fragilisée.
+
+\medskip
+\textbf{Analyse} (confiance élevée). Les faits tirés de l'ordinateur tiendront~;
+ceux tirés de la clé seule seront discutés. On construit la démonstration sur
+les pièces les plus solides, et l'on recoupe.
+\end{boxscenario}
+
+\begin{boxmetier}{Expert judiciaire et avocat}
+\textbf{Anticiper la contestation.} L'expert et l'avocat se demandent, pour
+chaque pièce~: « comment la défense pourrait-elle la contester~? ». Ils
+corrigent en amont ce qui peut l'être, et signalent honnêtement le reste.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{La recevabilité} tient à la manière, pas à la seule
+          exactitude.
+    \item \textbf{Quatre conditions}~: licéité, intégrité, authenticité,
+          traçabilité.
+    \item \textbf{Quatre principes de l'ACPO}~: ne pas altérer, être compétent,
+          tracer, garantir.
+    \item \textbf{L'opposabilité} du CRO \emph{est} la recevabilité.
+    \item \textbf{On anticipe} la contestation.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: définir la recevabilité~;
+citer ses conditions~; énoncer les principes de l'ACPO~; relier au CRO~;
+reconnaître une preuve irrecevable.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.1. Définir \niveaubase}]
+À quoi tient la recevabilité d'une preuve~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.2. Conditions \niveaubase}]
+Citez les quatre conditions de la recevabilité.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.3. ACPO \niveaubase}]
+Énoncez le premier principe de l'ACPO.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.4. Exacte mais écartée \niveaumoyen}]
+Comment une preuve exacte peut-elle être écartée~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.5. Reproductible \niveaumoyen}]
+Pourquoi un tiers doit-il pouvoir reproduire l'analyse~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.6. Deux pièces \niveaumoyen}]
+Pourquoi l'ordinateur est-il recevable et la clé USB fragilisée~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.7. CRO \niveaumoyen}]
+Pourquoi dit-on que l'opposabilité est la recevabilité~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.8. Anticiper \niveaumoyen}]
+Comment anticiper la contestation d'une pièce par la défense~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.9. Liste de contrôle \niveauexpert}]
+Rédigez une liste de contrôle de recevabilité pour TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~6.10. Note de recevabilité \niveauexpert}]
+Rédigez la note qui établit la recevabilité de l'ordinateur saisi.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27037~\cite{iso27037}, 27042~\cite{iso27042}~;
+          ACPO~\cite{acpo2012}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} La recevabilité se joue dès l'acquisition~: la
+Partie~III s'ouvre sur l'identification et la préservation des sources
+(Chapitre~\ref{chap:preserver}).
+\end{boxinfo}

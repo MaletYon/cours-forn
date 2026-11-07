@@ -1,0 +1,196 @@
+% ============================================================================
+% Fichier  : partie4/P04_C12_forensique_memoire.tex : FORN (LPI342)
+% Sources : NIST SP 800-86 ; RFC 3227. Opération TSANAGA.
+% ============================================================================
+
+\chapter{Forensique Mémoire}
+\label{chap:memoire}
+\chaptermark{Forensique mémoire}
+
+\epigraph{%
+    « La mémoire vive avoue ce que le disque dissimule. »%
+}{Principe du cours}
+
+\niveauChapitre{Expert}{Chapitres~\ref{chap:acquisition} et~\ref{chap:disque}.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Comprendre ce que révèle la mémoire vive.
+    \item Analyser une capture mémoire.
+    \item Repérer processus, connexions, secrets.
+    \item Relier la mémoire au disque et au réseau.
+    \item Qualifier un élément de mémoire.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : que contenait la mémoire de l'ordinateur de M. NDONGO au moment de la saisie ?}
+% ============================================================================
+
+La capture mémoire réalisée à chaud (Chapitre~\ref{chap:acquisition}) contient
+l'état vivant du système~: c'est là que se trouvait la clé du conteneur
+chiffré. Ce chapitre apprend à l'analyser.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Ce que révèle la mémoire (section~\ref{sec:c12-revele}).
+    \item Analyser une capture (section~\ref{sec:c12-analyser}).
+    \item Secrets et chiffrement (section~\ref{sec:c12-secrets}).
+    \item Recouper avec le disque (section~\ref{sec:c12-recouper}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Ce que Révèle la Mémoire}
+\label{sec:c12-revele}
+% ============================================================================
+
+\begin{tableaucours}{L{4.0cm}L{8.2cm}}{%
+    \tableauHeader{Élément} &
+    \tableauHeader{Intérêt}
+}
+Processus en cours & Programmes actifs, parent suspect \\
+Connexions réseau & Destinations contactées au moment de la saisie \\
+Secrets déchiffrés & Clés, mots de passe, jetons en clair \\
+Fichiers ouverts & Documents en cours d'usage \\
+Fragments & Textes, adresses, en mémoire mais non sur disque \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~12.1. Ce que révèle la mémoire vive}\end{center}
+
+% ============================================================================
+\section{Analyser une Capture}
+\label{sec:c12-analyser}
+% ============================================================================
+
+\begin{boxprocedure}
+\textbf{Analyser une capture mémoire}
+\begin{enumerate}
+    \item Vérifier l'intégrité de la capture (condensat).
+    \item Lister les processus et leurs liens de parenté.
+    \item Lister les connexions réseau ouvertes.
+    \item Rechercher secrets, clés, fragments pertinents.
+    \item Recouper avec le disque et le réseau.
+\end{enumerate}
+\end{boxprocedure}
+
+% ============================================================================
+\section{Secrets et Chiffrement}
+\label{sec:c12-secrets}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. La clé en mémoire}
+\textbf{Constatation.} La capture mémoire contient la clé du conteneur
+chiffré, en clair (le conteneur était monté à la saisie). Elle permet d'ouvrir
+le conteneur et d'en analyser le contenu.
+
+\medskip
+\textbf{Analyse} (confiance élevée). Sans la capture à chaud, le conteneur
+serait resté inaccessible. La clé récupérée a permis d'établir que le
+conteneur contenait une copie du fichier clients. L'arbitrage de l'acquisition
+à chaud trouve ici sa justification.
+\end{boxscenario}
+
+\begin{boxCRO}
+\textbf{Une clé en mémoire, un pouvoir à encadrer.} Déchiffrer un conteneur
+grâce à une clé trouvée en mémoire reste dans le périmètre de la réquisition~:
+\cro{0}{+}{+}. En sortir (déchiffrer d'autres supports non visés) violerait la
+confidentialité et le mandat.
+\end{boxCRO}
+
+% ============================================================================
+\section{Recouper avec le Disque}
+\label{sec:c12-recouper}
+% ============================================================================
+
+La mémoire, seule, est un instantané~; recoupée avec le disque (le fichier
+récupéré) et le réseau (les destinations), elle devient un faisceau. La force
+de l'enquête tient à la convergence des domaines sur une même histoire.
+
+\begin{boxmetier}{Analyste forensique}
+\textbf{La mémoire, fenêtre sur l'instant.} L'analyste traite la capture
+mémoire comme une photographie de l'instant de la saisie~: précieuse, unique,
+à recouper. Il en extrait ce qui sert l'affaire, dans le périmètre.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{La mémoire} révèle processus, connexions, secrets,
+          fragments.
+    \item \textbf{On vérifie} l'intégrité de la capture avant de l'analyser.
+    \item \textbf{Les secrets en clair} (clés) ouvrent les conteneurs
+          chiffrés.
+    \item \textbf{On reste dans le périmètre} de la réquisition.
+    \item \textbf{On recoupe} mémoire, disque, réseau.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: citer ce que révèle la
+mémoire~; analyser une capture~; exploiter un secret dans le périmètre~;
+recouper les domaines~; qualifier un élément de mémoire.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.1. Révélations \niveaubase}]
+Citez trois éléments que révèle la mémoire vive.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.2. Intégrité \niveaubase}]
+Que vérifie-t-on avant d'analyser une capture mémoire~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.3. La clé \niveaubase}]
+Qu'a permis la clé trouvée en mémoire dans TSANAGA~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.4. Périmètre \niveaumoyen}]
+Peut-on utiliser une clé trouvée en mémoire pour déchiffrer un support non
+visé~? Pourquoi~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.5. Instantané \niveaumoyen}]
+Pourquoi la mémoire est-elle un instantané à recouper~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.6. CRO \niveaumoyen}]
+Expliquez l'analyse CRO de l'usage d'une clé trouvée en mémoire.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.7. Parenté \niveaumoyen}]
+Pourquoi examiner les liens de parenté entre processus~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.8. Convergence \niveaumoyen}]
+Comment la mémoire se recoupe-t-elle avec le disque dans TSANAGA~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.9. Plan d'analyse \niveauexpert}]
+Rédigez le plan d'analyse de la capture mémoire de TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~12.10. Justification \niveauexpert}]
+Rédigez la note qui justifie l'exploitation de la clé trouvée en mémoire.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item NIST SP~800-86~\cite{nist80086}~; RFC~3227~\cite{rfc3227}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Reste la trace des échanges~: le
+Chapitre~\ref{chap:reseau} traite du forensique réseau.
+\end{boxinfo}

@@ -1,0 +1,156 @@
+% ============================================================================
+% Fichier  : partie0/P00_scene_numerique.tex : FORN (LPI342)
+% ============================================================================
+
+\chapter{Prologue : la Scène Numérique}
+\label{chap:prologue}
+\chaptermark{Prologue}
+
+\epigraph{%
+    « Tout contact laisse une trace. »%
+}{Edmond Locard, 1920}
+
+\niveauChapitre{Introductif}{Aucun prérequis. Les notions sont reprises en
+détail dans les chapitres.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Découvrir la posture de l'enquêteur numérique.
+    \item Distinguer l'enquête de l'attaque, la trace du jugement.
+    \item Découvrir le fil rouge LiZbiZ et l'opération TSANAGA.
+    \item Situer le Trilemme CRO et la chaîne de possession.
+    \item Formuler les questions auxquelles le cours répond.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Un ordinateur et une clé USB, scellés dans un sac}
+% ============================================================================
+
+Après le rançongiciel de mars, LiZbiZ découvre qu'un ancien employé de son
+site de Garoua, M.~NDONGO, aurait, des mois plus tôt, copié puis revendu le
+fichier des clients. Le 20~avril 2026, sur réquisition du parquet, un
+ordinateur portable et une clé USB sont saisis à son domicile et remis, sous
+scellé, au cabinet \sigle{NYONG SÉCURITÉ}, désigné comme expert.
+
+\medskip
+Sur ces supports se trouvent, peut-être, la preuve de ce qui s'est passé.
+Mais une preuve mal recueillie, mal conservée, ne vaut rien devant un
+tribunal\footnote{Cas fictif établi pour le cours. Les noms, les dates et les
+montants sont fictifs~; les mécanismes techniques et les références
+normatives sont exacts.}. Toute l'enquête tient dans une tension~: établir la
+vérité \emph{et} pouvoir la prouver.
+
+% ============================================================================
+\section{L'Enquêteur n'est pas un Pirate}
+\label{sec:p00-posture}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Forensique numérique}~: recherche méthodique, documentée et
+recevable des traces laissées par un événement sur les supports numériques,
+afin d'établir ce qui s'est passé, et de pouvoir le démontrer devant un
+tiers. Elle se distingue du piratage par le cadre (autorisation, droit) et la
+posture (neutralité, traçabilité).
+\end{boxdef}
+
+\begin{tableaucours}{L{4.0cm}L{4.2cm}L{4.0cm}}{%
+    \tableauHeader{} &
+    \tableauHeader{Le pirate} &
+    \tableauHeader{L'enquêteur forensique}
+}
+But & Accéder, nuire, profiter & Établir et prouver \\
+Cadre & Illégal & Autorisé, encadré \\
+Trace & Les efface & Les préserve \\
+Posture & Partisane & Neutre, impartiale \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~0.1. Deux usages des mêmes compétences}\end{center}
+
+% ============================================================================
+\section{Le Fil Rouge : LiZbiZ et l'Opération TSANAGA}
+\label{sec:p00-filrouge}
+% ============================================================================
+
+Le cours suit une même enquête, l'\sigle{opération TSANAGA}, menée à Garoua
+par le cabinet NYONG SÉCURITÉ pour le compte du parquet, sur les supports
+saisis chez M.~NDONGO.
+
+\begin{tableaucours}{L{3.4cm}L{8.8cm}}{%
+    \tableauHeader{Acteur} &
+    \tableauHeader{Rôle}
+}
+M.~BIKORO & Expert forensique, cabinet NYONG SÉCURITÉ \\
+Mme~NKENG & Analyste forensique \\
+Me~TSALA & Avocat~; veille à la recevabilité \\
+Le parquet de Garoua & Autorité requérante \\
+M.~NDONGO & Mis en cause (ancien employé de LiZbiZ) \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~0.2. Les acteurs de l'opération TSANAGA}\end{center}
+
+% ============================================================================
+\section{Deux Fils : CRO et Chaîne de Possession}
+\label{sec:p00-cro}
+% ============================================================================
+
+\begin{boxCRO}
+\textbf{Le Trilemme CRO.} \termecle{Confidentialité}~: ne saisir et n'exposer
+que le nécessaire. \termecle{Fiabilité}~: la trace est-elle fidèle, intègre,
+non altérée~? \termecle{Opposabilité}~: pourra-t-on s'en prévaloir devant le
+juge~? Chaque acte d'enquête s'arbitre sur ces trois dimensions, et se
+\emph{documente}.
+\end{boxCRO}
+
+\begin{boxprocedure}
+\textbf{La chaîne de possession, dès la saisie}
+\begin{enumerate}
+    \item Identifier chaque support (numéro de scellé, description).
+    \item Consigner qui l'a, depuis quand, pour quoi.
+    \item Ne jamais rompre la continuité de la détention.
+    \item Calculer les empreintes avant toute analyse.
+    \item Joindre la chaîne au dossier.
+\end{enumerate}
+\end{boxprocedure}
+
+% ============================================================================
+\section{Les Questions du Cours}
+\label{sec:p00-questions}
+% ============================================================================
+
+\begin{boxinfo}
+\textbf{Ce que le cours apprend à répondre.}
+\begin{itemize}
+    \item Qu'est-ce qu'une enquête numérique, et qu'est-ce qui la distingue
+          d'un piratage (Partie~I)~?
+    \item Qu'est-ce qui rend une preuve recevable (Partie~II)~?
+    \item Comment acquérir sans altérer (Partie~III)~?
+    \item Comment analyser disque, mémoire, réseau, mobile, nuage
+          (Partie~IV)~?
+    \item Comment déjouer l'anti-forensique et reconstituer (Partie~V)~?
+    \item Comment restituer, par un rapport et devant un tribunal
+          (Partie~VI)~?
+\end{itemize}
+\end{boxinfo}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce prologue~:}
+\begin{itemize}
+    \item \textbf{Tout contact laisse une trace}~; l'enquête la cherche et la
+          préserve.
+    \item \textbf{L'enquêteur n'est pas un pirate}~: cadre et posture le
+          distinguent.
+    \item \textbf{Le fil rouge}~: LiZbiZ et l'opération TSANAGA à Garoua.
+    \item \textbf{CRO et chaîne de possession} encadrent chaque acte.
+    \item \textbf{Établir et prouver}~: la double exigence de l'enquête.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Transition.} Commençons par définir la discipline et sa posture~:
+c'est l'objet du Chapitre~\ref{chap:forensique}.
+\end{boxinfo}

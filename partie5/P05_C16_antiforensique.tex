@@ -1,0 +1,196 @@
+% ============================================================================
+% Fichier  : partie5/P05_C16_antiforensique.tex : FORN (LPI342)
+% Sources : ISO/IEC 27042 ; NIST SP 800-86. Opération TSANAGA.
+% ============================================================================
+
+\chapter{L'Anti-Forensique et le Chiffrement}
+\label{chap:anti}
+\chaptermark{L'anti-forensique}
+
+\epigraph{%
+    « Effacer une trace en laisse souvent une autre~:\\
+    celle de l'effacement. »%
+}{Principe du cours}
+
+\niveauChapitre{Expert}{Partie~IV.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Reconnaître les techniques d'anti-forensique.
+    \item Comprendre l'effacement sécurisé et ses limites.
+    \item Traiter le chiffrement dans une enquête.
+    \item Repérer les traces d'une dissimulation.
+    \item Rester honnête sur ce que l'on ne peut établir (NEK).
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : si M. NDONGO a effacé et chiffré ses traces, l'enquête est-elle bloquée ?}
+% ============================================================================
+
+Un suspect averti efface, chiffre, dissimule. Ces techniques compliquent
+l'enquête mais laissent elles-mêmes des traces. Ce chapitre apprend à les
+reconnaître et à dire honnêtement ce qui reste hors d'atteinte.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Les techniques d'anti-forensique (section~\ref{sec:c16-techniques}).
+    \item L'effacement sécurisé (section~\ref{sec:c16-effacement}).
+    \item Le chiffrement (section~\ref{sec:c16-chiffrement}).
+    \item L'honnêteté du NEK (section~\ref{sec:c16-nek}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Les Techniques d'Anti-Forensique}
+\label{sec:c16-techniques}
+% ============================================================================
+
+\begin{tableaucours}{L{3.6cm}L{8.6cm}}{%
+    \tableauHeader{Technique} &
+    \tableauHeader{Trace qu'elle laisse souvent}
+}
+Effacement sécurisé & Absence anormale, outil installé, date d'exécution \\
+Chiffrement & Conteneur, extension, outil, clé en mémoire \\
+Modification d'horodatage & Incohérences entre artefacts \\
+Dissimulation (renommage) & Signature qui trahit le vrai type \\
+Effacement des journaux & Événement de nettoyage, trou dans la suite \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~16.1. Techniques d'anti-forensique et leurs traces}\end{center}
+
+% ============================================================================
+\section{L'Effacement Sécurisé}
+\label{sec:c16-effacement}
+% ============================================================================
+
+L'\termecle{effacement sécurisé} réécrit l'espace pour empêcher la
+récupération. Mais il laisse des indices~: l'outil utilisé, sa date
+d'exécution, l'absence anormale de données là où il devrait y en avoir. Un
+effacement ciblé, juste avant une saisie, est en soi un élément.
+
+% ============================================================================
+\section{Le Chiffrement}
+\label{sec:c16-chiffrement}
+% ============================================================================
+
+\begin{boxalert}
+\textbf{Violation typique.} Tenter de « casser » un chiffrement fort par force
+brute, sans espoir réaliste.
+
+\smallskip
+\textbf{Règle~:} contre un chiffrement fort, on cherche la clé ailleurs
+(mémoire capturée à chaud, mot de passe noté, phrase de passe faible), pas la
+force brute. Dans TSANAGA, la clé était en mémoire
+(Chapitre~\ref{chap:memoire}).
+\end{boxalert}
+
+% ============================================================================
+\section{L'Honnêteté du NEK}
+\label{sec:c16-nek}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. Ce qui reste hors d'atteinte}
+\textbf{Constatation.} Un second conteneur chiffré, non monté à la saisie,
+reste inaccessible~: aucune clé trouvée, chiffrement fort.
+
+\medskip
+\textbf{Analyse} (confiance élevée sur l'impossibilité). On ne peut établir le
+contenu de ce conteneur~: c'est un \sigle{NEK}, à déclarer tel quel. On ne
+suppose pas son contenu~; on rapporte qu'il existe et reste chiffré. L'honnêteté
+sur les limites renforce la crédibilité du reste.
+\end{boxscenario}
+
+\begin{boxCRO}
+\textbf{Déclarer l'inaccessible.} Prétendre connaître le contenu d'un
+conteneur non ouvert dégraderait la \cro{0}{-}{-}~: affirmation non fiable,
+non opposable. Le NEK préserve la valeur de l'ensemble du rapport.
+\end{boxCRO}
+
+\begin{boxmetier}{Expert judiciaire}
+\textbf{Dire ce qu'on ne sait pas.} L'expert qui déclare honnêtement un NEK
+(« ce conteneur reste chiffré, son contenu est indéterminé ») est plus crédible
+que celui qui comble les vides par des suppositions. La limite assumée est une
+force.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{L'anti-forensique} laisse souvent la trace de
+          l'effacement.
+    \item \textbf{L'effacement sécurisé} réécrit, mais laisse des indices.
+    \item \textbf{Contre le chiffrement fort}, on cherche la clé ailleurs.
+    \item \textbf{Ce qui reste inaccessible} est un NEK, à déclarer.
+    \item \textbf{L'honnêteté sur les limites} renforce la crédibilité.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: reconnaître les techniques
+d'anti-forensique~; expliquer l'effacement sécurisé~; traiter le
+chiffrement~; déclarer un NEK~; défendre l'honnêteté des limites.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.1. Techniques \niveaubase}]
+Citez trois techniques d'anti-forensique.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.2. Effacement \niveaubase}]
+Quelles traces laisse un effacement sécurisé~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.3. Chiffrement \niveaubase}]
+Contre un chiffrement fort, où cherche-t-on la clé~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.4. L'effacement comme indice \niveaumoyen}]
+Pourquoi un effacement juste avant une saisie est-il un élément~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.5. NEK \niveaumoyen}]
+Que faire du second conteneur chiffré inaccessible~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.6. Force brute \niveaumoyen}]
+Pourquoi la force brute contre un chiffrement fort est-elle vaine~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.7. CRO \niveaumoyen}]
+Pourquoi supposer le contenu d'un conteneur dégrade-t-il la preuve~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.8. Honnêteté \niveaumoyen}]
+En quoi déclarer un NEK renforce-t-il la crédibilité~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.9. Détecter \niveauexpert}]
+Comment détecter une modification d'horodatage dans TSANAGA~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~16.10. Note de limites \niveauexpert}]
+Rédigez la section « limites de l'expertise » du rapport TSANAGA.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27042~\cite{iso27042}~; NIST SP~800-86~\cite{nist80086}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Il faut maintenant assembler les domaines en une
+histoire~: le Chapitre~\ref{chap:reconstitution} traite de la corrélation et
+de la reconstitution chronologique.
+\end{boxinfo}

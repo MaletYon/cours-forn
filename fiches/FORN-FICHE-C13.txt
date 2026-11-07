@@ -1,0 +1,233 @@
+NDAP SUKULU · FORN · fiche FORN-FICHE-C13
+Chapitre 13 : Forensique réseau
+
+Version papier, à utiliser en attendant l'ouverture du portail NDAP SUKULU.
+La fiche complète compte 40 questions. Répondez sur la grille en fin de fiche.
+Durée indicative : 60 minutes. Seuil de réussite : 60 %.
+Les corrections figurent dans le livret de correction du cours.
+
+========================================================================
+Questions à choix multiple (une seule bonne réponse)
+========================================================================
+
+ 1. Le volume d'un envoi est dans les journaux de :
+      a) Flux
+      b) Vente
+      c) Météo
+      d) Prix
+
+ 2. Les pièces jointes envoyées sont dans :
+      a) Le flux
+      b) La messagerie
+      c) Le DNS
+      d) Le prix
+
+ 3. L'exfiltration est un envoi sortant :
+      a) Normal
+      b) Vendu
+      c) Anormal
+      d) Chiffré
+
+ 4. Le canal de pilotage, ce sont de petites connexions :
+      a) Uniques
+      b) Vendues
+      c) Chiffrées
+      d) Régulières
+
+ 5. Le bureau d'analyse travaille sur des journaux :
+      a) De flux exportés
+      b) Graphiques
+      c) De vente
+      d) De météo
+
+ 6. On agrège par couple source-destination et par :
+      a) Prix
+      b) Volume
+      c) Météo
+      d) Nom
+
+ 7. Des données peuvent se dissimuler dans des requêtes :
+      a) De vente
+      b) De météo
+      c) DNS
+      d) De prix
+
+ 8. L'envoi du 5 janvier fait :
+      a) 1 Go
+      b) 180 Mo
+      c) 1 To
+      d) 18 Mo
+
+ 9. Il va vers un service d'hébergement :
+      a) Personnel
+      b) Public
+      c) De vente
+      d) De météo
+
+10. L'envoi est établi ; son contenu est :
+      a) Certain
+      b) Probable
+      c) Vendu
+      d) Chiffré
+
+11. Les noms résolus sont dans les journaux :
+      a) De flux
+      b) De vente
+      c) DNS
+      d) De météo
+
+12. On repère les destinations :
+      a) Habituelles
+      b) De vente
+      c) De météo
+      d) Inhabituelles
+
+13. On relie l'envoi à la copie sur :
+      a) Clé
+      b) Nuage
+      c) Marché
+      d) Prix
+
+14. Des journaux de flux exportés sont :
+      a) Insuffisants
+      b) Suffisants et opposables
+      c) Interdits
+      d) Vendus
+
+15. L'analyste suit le chemin de la :
+      a) Vente
+      b) Météo
+      c) Donnée
+      d) Facture
+
+16. L'envoi a lieu deux jours après la copie sur :
+      a) Nuage
+      b) Marché
+      c) Prix
+      d) Clé
+
+17. Une trace réseau isolée prouve :
+      a) Peu
+      b) Beaucoup
+      c) Tout
+      d) La vente
+
+18. Chaque canal laisse une :
+      a) Vente
+      b) Trace
+      c) Météo
+      d) Facture
+
+19. Un volume qui ne correspond pas à l'usage normal est :
+      a) Normal
+      b) Vendu
+      c) Suspect
+      d) Chiffré
+
+20. La méthode prime sur :
+      a) La trace
+      b) Le fait
+      c) La preuve
+      d) L'outil
+
+========================================================================
+Vrai ou faux
+========================================================================
+
+21. Le volume d'un envoi sortant est dans les journaux de flux.
+      Vrai / Faux
+
+22. L'exfiltration est un envoi sortant anormal.
+      Vrai / Faux
+
+23. Le canal de pilotage, ce sont de petites connexions régulières.
+      Vrai / Faux
+
+24. Le bureau d'analyse exige une capture graphique complète.
+      Vrai / Faux
+
+25. L'envoi du 5 janvier fait 18 Mo vers un service d'hébergement personnel.
+      Vrai / Faux
+
+26. L'envoi est établi et son contenu est certain.
+      Vrai / Faux
+
+27. Des données peuvent se dissimuler dans des requêtes DNS.
+      Vrai / Faux
+
+28. Des journaux de flux exportés suffisent et sont opposables.
+      Vrai / Faux
+
+29. Une trace réseau isolée prouve beaucoup à elle seule.
+      Vrai / Faux
+
+30. On relie l'envoi réseau à la copie sur clé.
+      Vrai / Faux
+
+========================================================================
+Textes à trous
+========================================================================
+
+31. Le volume d'un envoi est dans les journaux de ______.
+
+32. L'exfiltration est un envoi sortant ______.
+
+33. Le canal de pilotage, ce sont de petites connexions ______.
+
+34. Le bureau d'analyse travaille sur des journaux de flux ______.
+
+35. L'envoi du 5 janvier fait ______ Mo.
+
+36. Des données peuvent se dissimuler dans des requêtes ______.
+
+37. L'envoi est établi ; son contenu reste ______.
+
+38. On relie l'envoi réseau à la copie sur ______.
+
+39. Les noms résolus sont dans les journaux ______.
+
+40. La ______ prime sur l'outil.
+
+========================================================================
+Grille de réponses   Nom : ............................  Matricule : ............
+========================================================================
+ 1. ............................................
+ 2. ............................................
+ 3. ............................................
+ 4. ............................................
+ 5. ............................................
+ 6. ............................................
+ 7. ............................................
+ 8. ............................................
+ 9. ............................................
+10. ............................................
+11. ............................................
+12. ............................................
+13. ............................................
+14. ............................................
+15. ............................................
+16. ............................................
+17. ............................................
+18. ............................................
+19. ............................................
+20. ............................................
+21. ............................................
+22. ............................................
+23. ............................................
+24. ............................................
+25. ............................................
+26. ............................................
+27. ............................................
+28. ............................................
+29. ............................................
+30. ............................................
+31. ............................................
+32. ............................................
+33. ............................................
+34. ............................................
+35. ............................................
+36. ............................................
+37. ............................................
+38. ............................................
+39. ............................................
+40. ............................................

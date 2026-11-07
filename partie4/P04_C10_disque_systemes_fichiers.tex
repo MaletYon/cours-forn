@@ -1,0 +1,191 @@
+% ============================================================================
+% Fichier  : partie4/P04_C10_disque_systemes_fichiers.tex : FORN (LPI342)
+% Sources : ISO/IEC 27042 ; NIST SP 800-86 ; documentation FAT, NTFS, EXT.
+% ============================================================================
+
+\chapter{Forensique Disque et Systèmes de Fichiers}
+\label{chap:disque}
+\chaptermark{Forensique disque}
+
+\epigraph{%
+    « Le système de fichiers est une carte~;\\
+    l'enquêteur apprend à lire ses marges autant que son centre. »%
+}{Principe du cours}
+
+\niveauChapitre{Intermédiaire à expert}{Partie~III~; administration des
+systèmes.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Comprendre l'organisation d'un disque et d'une partition.
+    \item Distinguer FAT, NTFS et EXT.
+    \item Lire les métadonnées de fichiers (dates, propriétés).
+    \item Repérer l'espace alloué et non alloué.
+    \item Situer les artefacts à examiner.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : où, dans l'image du disque, chercher la trace de la copie du fichier clients ?}
+% ============================================================================
+
+Le disque de M.~NDONGO garde, peut-être, la trace de la copie du fichier
+clients sur la clé USB. Ce chapitre apprend à lire l'organisation du disque et
+de ses systèmes de fichiers pour y trouver ces traces.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Disque et partitions (section~\ref{sec:c10-partitions}).
+    \item FAT, NTFS, EXT (section~\ref{sec:c10-fs}).
+    \item Les métadonnées de fichiers (section~\ref{sec:c10-meta}).
+    \item Alloué et non alloué (section~\ref{sec:c10-alloue}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Disque et Partitions}
+\label{sec:c10-partitions}
+% ============================================================================
+
+Un disque se divise en \termecle{partitions}, chacune formatée avec un
+\termecle{système de fichiers} qui organise les données. La table des
+partitions décrit cette organisation~; une partition cachée ou supprimée est,
+en soi, un indice.
+
+% ============================================================================
+\section{FAT, NTFS, EXT}
+\label{sec:c10-fs}
+% ============================================================================
+
+\begin{tableaucours}{L{2.4cm}L{4.4cm}L{5.4cm}}{%
+    \tableauHeader{Système} &
+    \tableauHeader{Contexte} &
+    \tableauHeader{Intérêt forensique}
+}
+FAT / exFAT & Clés USB, cartes & Simple~; dates de création, modification, accès \\
+NTFS & Windows & Riche~: journal, métadonnées, flux, horodatages multiples \\
+EXT (2/3/4) & Linux & Inodes, horodatages, journal \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~10.1. Trois familles de systèmes de fichiers}\end{center}
+
+% ============================================================================
+\section{Les Métadonnées de Fichiers}
+\label{sec:c10-meta}
+% ============================================================================
+
+Chaque fichier porte des \termecle{métadonnées}~: dates de création, de
+modification, d'accès, de changement~; nom~; emplacement~; propriétaire. Ces
+horodatages, croisés, aident à dater une action (copie, ouverture). On les
+interprète avec prudence~: certaines opérations les modifient, d'autres non.
+
+\begin{boxCRO}
+\textbf{Lire sans sur-interpréter.} Un horodatage de modification prouve
+qu'un fichier a changé, non \emph{qui} l'a changé ni \emph{pourquoi}~:
+\cro{0}{+}{0} pour le fait, mais l'interprétation reste prudente. On
+distingue le tracé (la date) du déduit (l'intention).
+\end{boxCRO}
+
+% ============================================================================
+\section{Alloué et Non Alloué}
+\label{sec:c10-alloue}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. La trace de la copie}
+\textbf{Constatation.} Sur l'image NTFS du disque, le journal du système de
+fichiers et les raccourcis récents montrent qu'un fichier
+\texttt{clients.xlsx} a été ouvert puis copié vers un volume amovible le
+3~janvier.
+
+\medskip
+\textbf{Analyse} (confiance élevée pour la trace, moyenne pour l'auteur). La
+copie vers un amovible est établie par les artefacts NTFS. L'identité de la
+personne devra être recoupée (session ouverte, autres indices). On date le
+fait, on n'affirme pas encore l'auteur.
+\end{boxscenario}
+
+\begin{boxmetier}{Analyste forensique}
+\textbf{Connaître le système de fichiers.} L'analyste adapte sa lecture au
+système~: NTFS offre des horodatages multiples et un journal précieux~; FAT
+en offre moins. Savoir ce que chaque système conserve évite les conclusions
+erronées.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{Un disque} se divise en partitions et systèmes de fichiers.
+    \item \textbf{FAT, NTFS, EXT} conservent des traces de richesse inégale.
+    \item \textbf{Les métadonnées} (horodatages) aident à dater une action.
+    \item \textbf{On lit avec prudence}~: la date n'est pas l'auteur.
+    \item \textbf{L'espace non alloué} garde ce qu'on croyait effacé.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: décrire disque et
+partitions~; comparer FAT, NTFS, EXT~; lire des métadonnées~; distinguer
+alloué et non alloué~; dater sans sur-interpréter.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.1. Partition \niveaubase}]
+Qu'est-ce qu'une partition~? Un système de fichiers~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.2. NTFS \niveaubase}]
+Pourquoi NTFS est-il plus riche que FAT pour l'enquête~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.3. Métadonnées \niveaubase}]
+Citez trois horodatages portés par un fichier.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.4. La date et l'auteur \niveaumoyen}]
+Pourquoi un horodatage de modification ne désigne-t-il pas l'auteur~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.5. TSANAGA \niveaumoyen}]
+Quels artefacts NTFS montrent la copie de \texttt{clients.xlsx}~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.6. Partition cachée \niveaumoyen}]
+Pourquoi une partition cachée est-elle un indice~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.7. CRO \niveaumoyen}]
+Expliquez pourquoi on lit les horodatages avec prudence.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.8. EXT \niveaumoyen}]
+Qu'examine-t-on dans un système de fichiers EXT~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.9. Plan d'analyse \niveauexpert}]
+Rédigez le plan d'analyse disque de l'image NTFS de TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~10.10. Constat \niveauexpert}]
+Rédigez le constat de la copie de \texttt{clients.xlsx} vers l'amovible.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27042~\cite{iso27042}~; NIST SP~800-86~\cite{nist80086}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Le disque garde aussi ce qu'on a voulu effacer~: le
+Chapitre~\ref{chap:artefacts} traite des fichiers supprimés et des artefacts.
+\end{boxinfo}

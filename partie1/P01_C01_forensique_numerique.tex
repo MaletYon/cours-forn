@@ -1,0 +1,210 @@
+% ============================================================================
+% Fichier  : partie1/P01_C01_forensique_numerique.tex : FORN (LPI342)
+% Sources : ISO/IEC 27037, 27042, 27043 ; Locard ; ACPO. Opération TSANAGA.
+% ============================================================================
+
+\chapter{Qu'est-ce que la Forensique Numérique}
+\label{chap:forensique}
+\chaptermark{La forensique numérique}
+
+\epigraph{%
+    « La trace numérique est fragile~; c'est le soin de l'enquêteur\\
+    qui la rend solide. »%
+}{Principe du cours}
+
+\niveauChapitre{Fondamental}{Le prologue~; notions de systèmes et de réseaux.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Définir la forensique numérique et ses termes voisins.
+    \item Situer son histoire et ses figures fondatrices.
+    \item Distinguer ses domaines (disque, mémoire, réseau, mobile, nuage).
+    \item Comprendre son double ancrage, scientifique et juridique.
+    \item Situer les référentiels (ISO/IEC 27037, 27042, 27043, ACPO).
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : qu'est-ce qui distingue l'enquêteur numérique d'un informaticien ordinaire ?}
+% ============================================================================
+
+Un informaticien sait lire un disque~; un enquêteur forensique le lit
+\emph{sans l'altérer}, documente chaque geste, et sépare ce qu'il constate de
+ce qu'il en déduit. Ce chapitre définit la discipline, son histoire et ses
+domaines.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Définir la discipline (section~\ref{sec:c01-definir}).
+    \item Histoire et figures (section~\ref{sec:c01-histoire}).
+    \item Les domaines (section~\ref{sec:c01-domaines}).
+    \item Le double ancrage (section~\ref{sec:c01-ancrage}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Définir la Discipline}
+\label{sec:c01-definir}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Investigation numérique}~: démarche générale de collecte, d'analyse
+et d'interprétation d'éléments numériques pour éclairer une situation, dans
+tout contexte (judiciaire, administratif, privé). La \termecle{forensique
+numérique} (ou criminalistique numérique) en est le sous-ensemble à vocation
+probatoire, soumis à la rigueur de la preuve.
+\end{boxdef}
+
+\begin{tableaucours}{L{4.4cm}L{7.8cm}}{%
+    \tableauHeader{Terme} &
+    \tableauHeader{Sens}
+}
+Investigation numérique & Démarche générale, tous contextes \\
+Forensique (digital forensics) & Cadre probatoire, rigueur de la preuve \\
+Criminalistique numérique & Insiste sur la dimension scientifique \\
+Recherche de la preuve & Finalité juridique \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~1.1. Des termes voisins}\end{center}
+
+% ============================================================================
+\section{Histoire et Figures}
+\label{sec:c01-histoire}
+% ============================================================================
+
+La forensique numérique hérite des sciences de la trace. \termecle{Edmond
+Locard} (France, 1910) en énonce le principe fondateur~: « tout contact
+laisse une trace »~\cite{locard1920}. Appliqué au numérique, il signifie que
+toute action sur un système y laisse des marques, pour qui sait les lire et
+les préserver.
+
+% ============================================================================
+\section{Les Domaines}
+\label{sec:c01-domaines}
+% ============================================================================
+
+\begin{tableaucours}{L{3.4cm}L{8.8cm}}{%
+    \tableauHeader{Domaine} &
+    \tableauHeader{Objet}
+}
+Disque & Systèmes de fichiers, fichiers supprimés, artefacts \\
+Mémoire & État vivant du système, secrets, code \\
+Réseau & Flux, exfiltration, pilotage, chronologie \\
+Mobile & Téléphones~: messages, applications, géolocalisation \\
+Nuage et applications & Données hébergées, journaux de services \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~1.2. Les domaines de la forensique numérique}\end{center}
+
+% ============================================================================
+\section{Le Double Ancrage}
+\label{sec:c01-ancrage}
+% ============================================================================
+
+La forensique numérique s'appuie sur des référentiels qui lui donnent sa
+rigueur~: l'\norme{ISO/IEC 27037} (acquisition et préservation),
+l'\norme{ISO/IEC 27042} (analyse et interprétation), l'\norme{ISO/IEC 27043}
+(principes de l'investigation), et le guide \sigle{ACPO}. Elle s'ancre aussi
+dans le droit (Partie~II).
+
+\begin{boxscenario}{Opération TSANAGA. Une discipline, pas une intuition}
+\textbf{Constatation.} Devant l'ordinateur saisi, M.~BIKORO ne l'allume pas~:
+il le photographie scellé, note son état, et prépare l'acquisition selon
+l'ISO/IEC 27037.
+
+\medskip
+\textbf{Analyse} (confiance élevée). Le réflexe « ouvrir pour voir » aurait
+altéré la preuve. La discipline impose la méthode avant la curiosité~: c'est
+ce qui sépare l'enquête de la manipulation.
+\end{boxscenario}
+
+\begin{boxmetier}{Analyste forensique}
+\textbf{La méthode avant l'outil.} L'analyste connaît les outils, mais c'est
+sa méthode (préserver, documenter, séparer fait et interprétation) qui donne
+à son travail une valeur probante.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{La forensique} est l'investigation numérique à vocation
+          probatoire.
+    \item \textbf{Locard}~: « tout contact laisse une trace ».
+    \item \textbf{Cinq domaines}~: disque, mémoire, réseau, mobile, nuage.
+    \item \textbf{Double ancrage}~: scientifique (ISO 27037/42/43, ACPO) et
+          juridique.
+    \item \textbf{La méthode} distingue l'enquêteur de l'informaticien
+          ordinaire.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: définir la forensique et
+ses termes voisins~; citer Locard~; nommer les domaines~; situer les
+référentiels~; dire ce qui distingue l'enquêteur.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.1. Termes \niveaubase}]
+Distinguez investigation numérique et forensique numérique.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.2. Locard \niveaubase}]
+Énoncez le principe de Locard et son sens pour le numérique.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.3. Domaines \niveaubase}]
+Citez les cinq domaines de la forensique numérique.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.4. Pirate ou enquêteur \niveaumoyen}]
+Sur un même disque, qu'est-ce qui distingue le geste du pirate de celui de
+l'enquêteur~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.5. Référentiels \niveaumoyen}]
+Associez à chaque norme son objet~: 27037, 27042, 27043.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.6. TSANAGA \niveaumoyen}]
+Pourquoi M.~BIKORO n'allume-t-il pas l'ordinateur saisi~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.7. Double ancrage \niveaumoyen}]
+Expliquez le double ancrage, scientifique et juridique, de la discipline.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.8. Criminalistique \niveaumoyen}]
+Pourquoi parle-t-on de « criminalistique » numérique~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.9. Posture \niveauexpert}]
+Rédigez une courte charte de la posture de l'enquêteur numérique.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~1.10. Panorama \niveauexpert}]
+Pour l'opération TSANAGA, quels domaines seront probablement mobilisés, et
+pourquoi~?
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27037~\cite{iso27037}, 27043~\cite{iso27043}~;
+          ACPO~\cite{acpo2012}~; Locard~\cite{locard1920}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Toute enquête suit une démarche~: le
+Chapitre~\ref{chap:demarche} en présente les phases.
+\end{boxinfo}

@@ -1,0 +1,205 @@
+% ============================================================================
+% Fichier  : partie4/P04_C11_supprimes_artefacts.tex : FORN (LPI342)
+% Sources : ISO/IEC 27042 ; NIST SP 800-86. Opération TSANAGA.
+% ============================================================================
+
+\chapter{Fichiers Supprimés, Fragments et Artefacts}
+\label{chap:artefacts}
+\chaptermark{Supprimés et artefacts}
+
+\epigraph{%
+    « Supprimer, c'est souvent seulement cacher. »%
+}{Principe du cours}
+
+\niveauChapitre{Intermédiaire à expert}{Chapitre~\ref{chap:disque}.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Comprendre pourquoi un fichier supprimé subsiste.
+    \item Récupérer un fichier par ses fragments.
+    \item Identifier un type de fichier par sa signature.
+    \item Lire les artefacts d'usage (récents, raccourcis, corbeille).
+    \item Qualifier un artefact récupéré.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : le fichier clients, supprimé par M. NDONGO, peut-il encore être retrouvé ?}
+% ============================================================================
+
+M.~NDONGO a supprimé le fichier et vidé la corbeille. Pourtant, les données
+peuvent subsister. Ce chapitre explique pourquoi, et comment les récupérer et
+les qualifier.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Pourquoi un fichier subsiste (section~\ref{sec:c11-subsiste}).
+    \item Récupérer par fragments (section~\ref{sec:c11-carving}).
+    \item Les signatures de fichiers (section~\ref{sec:c11-signatures}).
+    \item Les artefacts d'usage (section~\ref{sec:c11-usage}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Pourquoi un Fichier Subsiste}
+\label{sec:c11-subsiste}
+% ============================================================================
+
+Supprimer un fichier ne l'efface pas~: le système marque son espace comme
+réutilisable et retire son entrée de l'index, mais les données restent tant
+qu'elles ne sont pas réécrites. D'où la possibilité de les
+\termecle{récupérer}, en partie ou en totalité, jusqu'à leur écrasement.
+
+% ============================================================================
+\section{Récupérer par Fragments}
+\label{sec:c11-carving}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Récupération par signatures} (\textit{file carving})~: technique qui
+reconstitue des fichiers à partir de leurs motifs de début et de fin dans
+l'espace non alloué, sans s'appuyer sur l'index du système de fichiers. Elle
+retrouve des fichiers dont l'entrée a disparu.
+\end{boxdef}
+
+% ============================================================================
+\section{Les Signatures de Fichiers}
+\label{sec:c11-signatures}
+% ============================================================================
+
+Un fichier commence souvent par une \termecle{signature} (quelques octets)
+qui trahit son type, indépendamment de son extension. Un fichier renommé en
+\texttt{.txt} mais commençant par la signature d'une archive reste une
+archive~: la signature prime sur l'extension.
+
+\begin{boxalert}
+\textbf{Violation typique.} Se fier à l'extension d'un fichier.
+
+\smallskip
+\textbf{Règle~:} l'extension se change en un clic. On identifie le type par la
+signature, pas par le nom~: c'est une parade classique de dissimulation.
+\end{boxalert}
+
+% ============================================================================
+\section{Les Artefacts d'Usage}
+\label{sec:c11-usage}
+% ============================================================================
+
+\begin{tableaucours}{L{3.6cm}L{8.6cm}}{%
+    \tableauHeader{Artefact} &
+    \tableauHeader{Ce qu'il révèle}
+}
+Fichiers récents, raccourcis & Documents ouverts, chemins, volumes amovibles \\
+Corbeille & Fichiers supprimés récupérables, date \\
+Journaux d'événements & Branchement de périphériques, sessions \\
+Fichiers temporaires, caches & Copies de travail, miniatures \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~11.1. Artefacts d'usage utiles}\end{center}
+
+\begin{boxscenario}{Opération TSANAGA. Le fichier retrouvé}
+\textbf{Constatation.} Dans l'espace non alloué, la récupération par
+signatures reconstitue un tableur dont la signature est celle d'un classeur,
+bien que l'entrée ait disparu. Son contenu correspond au fichier clients. Un
+raccourci récent pointe vers un volume amovible, le 3~janvier.
+
+\medskip
+\textbf{Analyse} (confiance élevée pour l'existence, moyenne pour l'auteur).
+Le fichier supprimé est récupéré et son contenu établi~; la copie vers
+l'amovible est corroborée par l'artefact de raccourci. Le faisceau se
+renforce.
+\end{boxscenario}
+
+\begin{boxobjet}{Fichier récupéré : clients (classeur)}
+\textbf{Nature~:} classeur récupéré par signatures dans l'espace non alloué.
+\textbf{Source~:} image disque TSA-2026-01 (condensat au dossier).
+\textbf{Pertinence~:} contenu correspondant au fichier clients.
+\textbf{Fiabilité~:} intègre (travail sur l'image). \textbf{Opposabilité~:}
+chaîne de possession continue.
+\end{boxobjet}
+
+\begin{boxmetier}{Analyste forensique}
+\textbf{Ne pas se fier au nom.} L'analyste identifie les fichiers par leur
+signature, fouille l'espace non alloué, et recoupe les artefacts d'usage. Ce
+que l'utilisateur croyait caché resurgit souvent.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{Supprimer n'est pas effacer}~: récupération possible.
+    \item \textbf{La récupération par signatures} reconstitue sans l'index.
+    \item \textbf{La signature} prime sur l'extension.
+    \item \textbf{Les artefacts d'usage} révèlent documents et périphériques.
+    \item \textbf{On qualifie} un fichier récupéré.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: expliquer la subsistance
+d'un fichier supprimé~; décrire la récupération par signatures~; identifier un
+type par signature~; lire les artefacts d'usage~; qualifier un fichier
+récupéré.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.1. Subsister \niveaubase}]
+Pourquoi un fichier supprimé peut-il être récupéré~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.2. Carving \niveaubase}]
+Qu'est-ce que la récupération par signatures~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.3. Extension \niveaubase}]
+Pourquoi ne pas se fier à l'extension d'un fichier~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.4. Signature \niveaumoyen}]
+Comment identifier un fichier renommé pour dissimuler son type~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.5. TSANAGA \niveaumoyen}]
+Comment le fichier clients supprimé a-t-il été retrouvé et corroboré~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.6. Raccourci \niveaumoyen}]
+Que révèle un raccourci récent pointant vers un volume amovible~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.7. Écrasement \niveaumoyen}]
+Qu'est-ce qui limite la récupération d'un fichier supprimé~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.8. Corbeille \niveaumoyen}]
+Que peut révéler la corbeille, même vidée~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.9. Faisceau \niveauexpert}]
+Construisez le faisceau d'indices de la copie du fichier clients.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~11.10. Qualification \niveauexpert}]
+Qualifiez complètement le fichier récupéré (cinq rubriques).
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27042~\cite{iso27042}~; NIST SP~800-86~\cite{nist80086}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Le disque ne dit pas tout~: la mémoire garde l'état
+vivant. Le Chapitre~\ref{chap:memoire} traite du forensique mémoire.
+\end{boxinfo}

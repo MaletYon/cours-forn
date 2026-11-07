@@ -1,0 +1,185 @@
+% ============================================================================
+% Fichier  : partie5/P05_C17_reconstitution.tex : FORN (LPI342)
+% Sources : ISO/IEC 27042 ; NIST SP 800-86. Opération TSANAGA.
+% ============================================================================
+
+\chapter{Corrélation et Reconstitution Chronologique}
+\label{chap:reconstitution}
+\chaptermark{Reconstitution chronologique}
+
+\epigraph{%
+    « Une preuve isolée se discute~;\\
+    un faisceau convergent s'impose. »%
+}{Principe du cours}
+
+\niveauChapitre{Expert}{Toute la Partie~IV~; Chapitre~\ref{chap:anti}.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Construire une chronologie à partir de plusieurs domaines.
+    \item Recaler les horloges et traiter les incohérences.
+    \item Faire converger les indices en un faisceau.
+    \item Distinguer le certain, le probable, l'indéterminé.
+    \item Préparer la démonstration pour le rapport.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : que s'est-il exactement passé, et avec quelle certitude ?}
+% ============================================================================
+
+Disque, mémoire, réseau, mobile, nuage ont chacun livré des éléments. Les
+assembler en une chronologie cohérente, en pesant la certitude de chacun, est
+le cœur de la reconstitution. Ce chapitre l'enseigne.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item Construire la chronologie (section~\ref{sec:c17-chrono}).
+    \item Recaler et traiter les incohérences (section~\ref{sec:c17-recaler}).
+    \item Le faisceau convergent (section~\ref{sec:c17-faisceau}).
+    \item Certain, probable, indéterminé (section~\ref{sec:c17-certitude}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{Construire la Chronologie}
+\label{sec:c17-chrono}
+% ============================================================================
+
+\begin{boxprocedure}
+\textbf{Construire une chronologie multi-domaines}
+\begin{enumerate}
+    \item Rassembler les événements datés de tous les domaines.
+    \item Recaler les horloges (écarts connus).
+    \item Ordonner et repérer les enchaînements.
+    \item Noter la source et la certitude de chaque événement.
+    \item Dater chaque étape de l'affaire.
+\end{enumerate}
+\end{boxprocedure}
+
+% ============================================================================
+\section{Recaler et Traiter les Incohérences}
+\label{sec:c17-recaler}
+% ============================================================================
+
+Les horloges diffèrent (fuseau, dérive, modification volontaire). On les
+recale sur une référence, on documente les écarts, et l'on traite les
+incohérences~: une date impossible (un fichier modifié après son effacement)
+signale souvent une manipulation (Chapitre~\ref{chap:anti}).
+
+% ============================================================================
+\section{Le Faisceau Convergent}
+\label{sec:c17-faisceau}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. Le faisceau}
+\textbf{Constatation.} La chronologie assemble~: 3~janvier, ouverture et copie
+de \texttt{clients.xlsx} vers un amovible (disque)~; 5~janvier, téléversement
+vers un service d'hébergement (réseau, trace de synchronisation)~; janvier,
+messages de négociation (mobile)~; à la saisie, le fichier dans un conteneur
+chiffré ouvert (mémoire).
+
+\medskip
+\textbf{Analyse} (confiance élevée). Quatre domaines convergent sur la même
+histoire~: copie, envoi, négociation, détention. Aucun indice isolé ne
+suffirait~; ensemble, ils forment un faisceau solide. Un second conteneur
+reste NEK.
+\end{boxscenario}
+
+% ============================================================================
+\section{Certain, Probable, Indéterminé}
+\label{sec:c17-certitude}
+% ============================================================================
+
+\begin{boxCRO}
+\textbf{Peser chaque élément.} La reconstitution distingue le \emph{certain}
+(établi par plusieurs sources), le \emph{probable} (une source, à corroborer)
+et l'\emph{indéterminé} (NEK). Attribuer la bonne certitude à chaque
+affirmation sert la \cro{0}{+}{+}~: un rapport qui surévalue sa certitude
+perd en opposabilité.
+\end{boxCRO}
+
+\begin{boxmetier}{Analyste forensique et expert judiciaire}
+\textbf{Assembler sans forcer.} L'expert fait converger les domaines, mais ne
+force pas le faisceau~: il laisse les NEK comme tels. Un faisceau honnête, qui
+assume ses zones d'ombre, convainc davantage qu'une démonstration trop lisse.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{La chronologie} assemble les événements datés des domaines.
+    \item \textbf{On recale les horloges} et on traite les incohérences.
+    \item \textbf{Le faisceau convergent} fait la force de la preuve.
+    \item \textbf{On pèse} certain, probable, indéterminé.
+    \item \textbf{On n'efface pas les NEK} pour lisser la démonstration.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: construire une chronologie
+multi-domaines~; recaler les horloges~; bâtir un faisceau~; peser la
+certitude~; préserver les NEK.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.1. Chronologie \niveaubase}]
+Quelles étapes pour construire une chronologie multi-domaines~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.2. Recaler \niveaubase}]
+Pourquoi recaler les horloges~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.3. Faisceau \niveaubase}]
+Pourquoi un indice isolé est-il plus fragile qu'un faisceau~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.4. Incohérence \niveaumoyen}]
+Que signale un fichier « modifié après son effacement »~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.5. TSANAGA \niveaumoyen}]
+Dressez le faisceau convergent de l'affaire, domaine par domaine.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.6. Certitude \niveaumoyen}]
+Classez en certain, probable, indéterminé trois éléments de l'affaire.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.7. Surévaluer \niveaumoyen}]
+Pourquoi surévaluer sa certitude nuit-il au rapport~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.8. NEK \niveaumoyen}]
+Pourquoi ne pas effacer les NEK de la reconstitution~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.9. Chronologie complète \niveauexpert}]
+Rédigez la chronologie complète et datée de l'opération TSANAGA.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~17.10. Carte de certitude \niveauexpert}]
+Construisez la carte « élément / source / certitude » de l'affaire.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27042~\cite{iso27042}~; NIST SP~800-86~\cite{nist80086}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Transition.} Le faisceau établi, il faut le restituer~: la Partie~VI
+s'ouvre sur le rapport forensique (Chapitre~\ref{chap:rapport}).
+\end{boxinfo}

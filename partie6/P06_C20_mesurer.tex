@@ -1,0 +1,219 @@
+% ============================================================================
+% Fichier  : partie6/P06_C20_mesurer.tex : FORN (LPI342)
+% Sources : ISO/IEC 27043 ; cadre OUI/NON/NEK (Minka). Opération TSANAGA.
+% ============================================================================
+
+\chapter{Mesurer et Progresser}
+\label{chap:mesurer}
+\chaptermark{Mesurer et conclure}
+
+\epigraph{%
+    « La qualité d'une enquête se mesure aussi\\
+    à l'honnêteté de ses incertitudes. »%
+}{Principe du cours}
+
+\niveauChapitre{Avancé}{L'ensemble du cours~; notions d'auditologie.}
+
+\begin{boxobjectifs}
+\begin{itemize}
+    \item Définir la qualité d'une enquête forensique.
+    \item Choisir des indicateurs honnêtes.
+    \item Appliquer le verdict OUI, NON, NEK.
+    \item Conduire une revue par les pairs.
+    \item Ouvrir sur la recherche.
+\end{itemize}
+\end{boxobjectifs}
+
+\bigskip
+
+% ============================================================================
+\section*{Question directrice : l'enquête TSANAGA était-elle « bonne » ?}
+% ============================================================================
+
+Une enquête se juge non à sa conclusion, mais à sa méthode, sa traçabilité et
+l'honnêteté de ses limites. Ce chapitre clôt le cours sur la mesure de la
+qualité.
+
+\medskip
+\textbf{Plan du chapitre.}
+\begin{enumerate}
+    \item La qualité d'une enquête (section~\ref{sec:c20-qualite}).
+    \item Des indicateurs honnêtes (section~\ref{sec:c20-indicateurs}).
+    \item Le verdict OUI / NON / NEK (section~\ref{sec:c20-verdict}).
+    \item Revue par les pairs et recherche (section~\ref{sec:c20-pairs}).
+\end{enumerate}
+
+\separateur
+
+% ============================================================================
+\section{La Qualité d'une Enquête}
+\label{sec:c20-qualite}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Qualité d'une enquête forensique}~: aptitude de l'enquête à produire
+des conclusions \emph{fiables} et \emph{opposables}, par une méthode tracée,
+reproductible, et une honnêteté assumée sur les limites. Une « bonne »
+conclusion issue d'une mauvaise méthode ne vaut rien.
+\end{boxdef}
+
+% ============================================================================
+\section{Des Indicateurs Honnêtes}
+\label{sec:c20-indicateurs}
+% ============================================================================
+
+\begin{tableaucours}{L{4.8cm}L{7.4cm}}{%
+    \tableauHeader{Indicateur} &
+    \tableauHeader{Ce qu'il dit}
+}
+Traçabilité des actes & Chaque geste documenté et reproductible \\
+Intégrité des pièces & Condensats vérifiés à chaque étape \\
+Part des conclusions corroborées & Faits tenus par plusieurs sources \\
+Clarté des limites & NEK déclarés, incertitudes assumées \\
+Tenue en contradictoire & Pièces résistant à la contestation \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~20.1. Indicateurs de qualité d'une enquête}\end{center}
+
+\begin{boxalert}
+\textbf{Indicateur trompeur.} « L'enquête a conclu à la culpabilité. »
+
+\smallskip
+\textbf{Règle~:} la conclusion n'est pas un indicateur de qualité~; l'expert
+ne conclut d'ailleurs pas à la culpabilité. Ce qui se mesure, c'est la méthode
+et l'honnêteté, non le résultat judiciaire.
+\end{boxalert}
+
+% ============================================================================
+\section{Le Verdict OUI / NON / NEK}
+\label{sec:c20-verdict}
+% ============================================================================
+
+\begin{boxdef}
+\termecle{Verdict à trois valeurs}~: pour chaque question d'enquête, la réponse
+est \sigle{OUI} (établi, avec preuve), \sigle{NON} (réfuté, avec preuve) ou
+\sigle{NEK} (indéterminé, faute de preuves). Le NEK n'affaiblit pas l'enquête~:
+il en garantit l'honnêteté.
+\end{boxdef}
+
+\begin{tableaucours}{L{2.0cm}L{4.8cm}L{5.4cm}}{%
+    \tableauHeader{Verdict} &
+    \tableauHeader{Question (TSANAGA)} &
+    \tableauHeader{Fondement}
+}
+OUI & Le fichier a-t-il été copié vers un amovible~? & Disque et artefacts \\
+OUI & A-t-il été téléversé vers un service~? & Réseau et synchronisation \\
+NEK & Que contient le second conteneur chiffré~? & Clé introuvable \\
+\end{tableaucours}
+\vspace{-0.8em}
+\begin{center}{\small\itshape Tableau~20.2. Le verdict OUI / NON / NEK appliqué~\cite{minka2026auditologie}}\end{center}
+
+% ============================================================================
+\section{Revue par les Pairs et Recherche}
+\label{sec:c20-pairs}
+% ============================================================================
+
+\begin{boxscenario}{Opération TSANAGA. La relecture}
+\textbf{Constatation.} Avant remise, le rapport est relu par un second expert
+du cabinet, qui vérifie méthode, condensats, et la juste attribution des
+certitudes.
+
+\medskip
+\textbf{Analyse} (confiance élevée). La revue par les pairs détecte les
+conclusions trop assurées et les NEK oubliés. Elle est, pour l'enquête
+forensique, l'équivalent du contrôle qualité~: elle améliore la fiabilité et
+l'opposabilité.
+\end{boxscenario}
+
+La recherche prolonge le cours~: automatisation de l'analyse, forensique du
+nuage et du mobile en contexte africain, et application du cadre de
+l'auditologie à la réduction de l'incertitude dans l'enquête numérique.
+
+\begin{boxmetier}{Expert judiciaire et analyste forensique}
+\textbf{Se faire relire.} L'expert ne remet jamais un rapport sans relecture
+par un pair~: un regard neuf voit les suppositions déguisées en faits. La
+qualité se construit à deux.
+\end{boxmetier}
+
+\separateur
+
+\begin{boxresume}
+\textbf{Ce qu'il faut retenir de ce chapitre~:}
+\begin{itemize}
+    \item \textbf{La qualité} tient à la méthode et à l'honnêteté, non à la
+          conclusion.
+    \item \textbf{Des indicateurs}~: traçabilité, intégrité, corroboration,
+          limites.
+    \item \textbf{OUI, NON, NEK}~: le verdict honnête.
+    \item \textbf{La revue par les pairs} est le contrôle qualité de
+          l'enquête.
+    \item \textbf{La recherche} prolonge la discipline.
+\end{itemize}
+\end{boxresume}
+
+\begin{boxinfo}
+\textbf{Points de contrôle de l'élève.} Je sais~: définir la qualité d'une
+enquête~; choisir des indicateurs honnêtes~; appliquer OUI/NON/NEK~; conduire
+une revue par les pairs~; situer la recherche.
+\end{boxinfo}
+
+\bigskip
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.1. Qualité \niveaubase}]
+À quoi tient la qualité d'une enquête forensique~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.2. Trois valeurs \niveaubase}]
+Donnez le sens de OUI, NON et NEK.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.3. Trompeur \niveaubase}]
+Pourquoi « l'enquête a conclu à la culpabilité » n'est-il pas un indicateur de
+qualité~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.4. Classer \niveaumoyen}]
+Attribuez OUI, NON ou NEK aux trois questions de TSANAGA du tableau.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.5. Pairs \niveaumoyen}]
+Que détecte une revue par les pairs~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.6. Méthode ou résultat \niveaumoyen}]
+Pourquoi mesure-t-on la méthode et non le résultat judiciaire~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.7. Indicateurs \niveaumoyen}]
+Choisissez trois indicateurs de qualité pour le cabinet NYONG SÉCURITÉ.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.8. NEK \niveaumoyen}]
+Pourquoi le NEK garantit-il l'honnêteté de l'enquête~?
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.9. Grille de qualité \niveauexpert}]
+Construisez une grille d'évaluation de la qualité d'une enquête forensique.
+\end{boxexo}
+
+\begin{boxexo}[title={\ding{45}\quad Exercice~20.10. Question de recherche \niveauexpert}]
+Formulez une question de recherche sur la forensique du mobile en contexte
+africain.
+\end{boxexo}
+
+\bigskip
+
+\begin{boxinfo}
+\textbf{Pour aller plus loin.}
+\begin{itemize}
+    \item ISO/IEC 27043~\cite{iso27043}~; cadre de
+          l'auditologie~\cite{minka2026auditologie}.
+\end{itemize}
+\end{boxinfo}
+
+\begin{boxinfo}
+\textbf{Fin du cours.} De la scène saisie au verdict mesuré, FORN aura montré
+qu'une enquête numérique établit \emph{et} prouve~: acquérir sans altérer,
+analyser chaque domaine, reconstituer un faisceau, et restituer avec rigueur,
+sans jamais confondre ce que l'on constate et ce que l'on en déduit.
+\end{boxinfo}

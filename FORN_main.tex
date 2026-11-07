@@ -1,0 +1,200 @@
+% ============================================================================
+% Fichier     : FORN_main.tex
+% Titre       : Forensique Numérique
+% Auteur      : MINKA MI NGUIDJOÏ Thierry Emmanuel
+% Institution : Chaire UNESCO d'Afrique Centrale Accès TIC : ENSP / LIMSI
+% Version     : 0.1 -- octobre 2026 (squelette)
+% ============================================================================
+
+\documentclass[12pt, twoside, openright, a4paper]{book}
+
+% --- Feuille de style unifiée ---
+\usepackage{Style_FORN}
+
+% --- Bibliographie ---
+\addbibresource{bibliographie/FORN_references.bib}
+
+% ============================================================================
+% MÉTADONNÉES PDF
+% ============================================================================
+\hypersetup{
+    pdftitle={Forensique Numérique},
+    pdfauthor={MINKA MI NGUIDJOÏ Thierry Emmanuel},
+    pdfsubject={LPI342 · Master Professionnel en Sécurité des Systèmes Informatiques et des Données · Université de Garoua},
+    pdfkeywords={forensique numérique, preuve, chaîne de possession, ISO 27037, ISO 27043, acquisition, FORN}
+}
+
+\begin{document}
+
+% --------------------------------------------------------------------------
+% ÉLÉMENTS PRÉLIMINAIRES (pages romaines)
+% --------------------------------------------------------------------------
+\frontmatter
+
+    \input{front/00_page_titre}
+    \cleardoublepage
+
+    \input{front/01_avant_propos}
+    \cleardoublepage
+
+    \input{front/02_mode_emploi}
+    \cleardoublepage
+
+    \input{front/03_ndap_sukulu}
+    \cleardoublepage
+
+    \tableofcontents
+    \cleardoublepage
+
+    \listoffigures
+    \listoftables
+    \cleardoublepage
+
+% --------------------------------------------------------------------------
+% CORPS DU COURS (pages arabes)
+% Numérotation des chapitres CONTINUE sur tout le cours : le prologue est le
+% chapitre 0, puis C01 à C21, un numéro par fichier.
+% --------------------------------------------------------------------------
+\mainmatter
+
+    \part*{Prologue Opérationnel}
+    \addcontentsline{toc}{part}{Prologue Opérationnel}
+        \setcounter{chapter}{-1}
+        \IfFileExists{partie0/P00_scene_numerique.tex}{\input{partie0/P00_scene_numerique}}{}
+
+    \part{Fondements de la Forensique Numérique}
+    \label{part:fondements}
+
+        \IfFileExists{partie1/P01_C01_forensique_numerique.tex}{\input{partie1/P01_C01_forensique_numerique}}{}
+        \IfFileExists{partie1/P01_C02_demarche_enquete.tex}{\input{partie1/P01_C02_demarche_enquete}}{}
+        \IfFileExists{partie1/P01_C03_ethique_neutralite.tex}{\input{partie1/P01_C03_ethique_neutralite}}{}
+
+    \part{Le Cadre Juridique et la Recevabilité}
+    \label{part:cadre}
+
+        \IfFileExists{partie2/P02_C04_droit_preuve.tex}{\input{partie2/P02_C04_droit_preuve}}{}
+        \IfFileExists{partie2/P02_C05_chaine_possession.tex}{\input{partie2/P02_C05_chaine_possession}}{}
+        \IfFileExists{partie2/P02_C06_recevabilite.tex}{\input{partie2/P02_C06_recevabilite}}{}
+
+    \part{L'Acquisition des Preuves}
+    \label{part:acquisition}
+
+        \IfFileExists{partie3/P03_C07_identifier_preserver.tex}{\input{partie3/P03_C07_identifier_preserver}}{}
+        \IfFileExists{partie3/P03_C08_duplication_hachage.tex}{\input{partie3/P03_C08_duplication_hachage}}{}
+        \IfFileExists{partie3/P03_C09_volatilite_acquisition.tex}{\input{partie3/P03_C09_volatilite_acquisition}}{}
+
+    \part{L'Analyse par Domaine}
+    \label{part:analyse}
+
+        \IfFileExists{partie4/P04_C10_disque_systemes_fichiers.tex}{\input{partie4/P04_C10_disque_systemes_fichiers}}{}
+        \IfFileExists{partie4/P04_C11_supprimes_artefacts.tex}{\input{partie4/P04_C11_supprimes_artefacts}}{}
+        \IfFileExists{partie4/P04_C12_forensique_memoire.tex}{\input{partie4/P04_C12_forensique_memoire}}{}
+        \IfFileExists{partie4/P04_C13_forensique_reseau.tex}{\input{partie4/P04_C13_forensique_reseau}}{}
+        \IfFileExists{partie4/P04_C14_forensique_mobile.tex}{\input{partie4/P04_C14_forensique_mobile}}{}
+        \IfFileExists{partie4/P04_C15_forensique_nuage.tex}{\input{partie4/P04_C15_forensique_nuage}}{}
+
+    \part{Les Défis de l'Enquête}
+    \label{part:defis}
+
+        \IfFileExists{partie5/P05_C16_antiforensique.tex}{\input{partie5/P05_C16_antiforensique}}{}
+        \IfFileExists{partie5/P05_C17_reconstitution.tex}{\input{partie5/P05_C17_reconstitution}}{}
+
+    \part{Restituer l'Enquête}
+    \label{part:restituer}
+
+        \IfFileExists{partie6/P06_C18_rapport.tex}{\input{partie6/P06_C18_rapport}}{}
+        \IfFileExists{partie6/P06_C19_tribunal.tex}{\input{partie6/P06_C19_tribunal}}{}
+        \IfFileExists{partie6/P06_C20_mesurer.tex}{\input{partie6/P06_C20_mesurer}}{}
+
+% --------------------------------------------------------------------------
+% ANNEXES
+% --------------------------------------------------------------------------
+\appendix
+
+    \input{annexes/Ann_A_glossaire}
+    \input{annexes/Ann_B_outils}
+    \input{annexes/Ann_C_templates}
+    \input{annexes/Ann_D_textes}
+    \input{annexes/Ann_E_bibliographie}
+    \input{annexes/Ann_F_contacts}
+
+% --------------------------------------------------------------------------
+% ÉLÉMENTS FINAUX
+% --------------------------------------------------------------------------
+\backmatter
+
+    \nocite{*}
+    \printbibliography[heading=bibintoc, title={Références bibliographiques}]
+
+    \printindex
+
+% ==============================================================================
+% 4ÈME DE COUVERTURE
+% ==============================================================================
+\clearpage
+\thispagestyle{empty}
+\pagecolor{CouleurPrimaire}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \fill[CouleurAccent]
+        (current page.south west) rectangle
+        ([yshift=1.8cm] current page.south east);
+    \fill[CouleurAccent]
+        ([yshift=-1.4cm] current page.north west) rectangle
+        ([yshift=-1.7cm] current page.north east);
+\end{tikzpicture}
+
+\vspace*{2.5cm}
+
+\begin{center}
+    {\color{CouleurAccent}\rule{0.6\linewidth}{1pt}}\\[1.5ex]
+    {\color{white}\Large\bfseries À propos de ce cours}\\[1.5ex]
+    {\color{CouleurAccent}\rule{0.6\linewidth}{1pt}}
+\end{center}
+
+\vspace{1cm}
+
+\begin{center}
+\begin{minipage}{0.75\textwidth}
+\color{white!85!gray}\setstretch{1.4}
+Quand un système d'information s'arrête, la question décisive n'est pas
+technique : elle porte sur qui avait décidé, et qui devait rendre compte.
+Ce cours apprend à y répondre avant la panne.
+
+\medskip
+
+Il progresse en six parties, précédées d'un prologue : les fondements de la
+gouvernance des systèmes d'information, le référentiel COBIT~2019, le cadre
+normatif et juridique, ITIL~4 et les processus de gestion des services, les
+défis de l'agilité, du nuage et de l'intelligence artificielle, et enfin la
+recherche.
+
+\medskip
+
+Chaque notion est ancrée à la fois dans les standards internationaux (ISO,
+ISACA, IIA, INTOSAI) et dans le droit camerounais et communautaire (CEMAC,
+OHADA). Le cours s'adresse aux étudiants du Master Professionnel en
+Management des Systèmes d'Information et aux professionnels qui exercent comme
+DSI, responsables GRC, auditeurs des SI, responsables des services
+informatiques ou RSSI.
+\end{minipage}
+\end{center}
+
+\vfill
+
+\begin{center}
+    {\color{CouleurAccent}\rule{0.7\linewidth}{1.2pt}}\\[1.2ex]
+    {\color{white}\large\bfseries MINKA MI NGUIDJOÏ Thierry Emmanuel}\\[0.4ex]
+    {\color{white!80!gray}\small
+        CISA~·~CISM~·~CGEIT~·~CRISC~·~CDPSE~·~ISO 27001~·~ISO 22301~·~ISO 9001}\\[0.3ex]
+    {\color{white!70!gray}\footnotesize\itshape
+        Chercheur au laboratoire d'Ingénierie Mathématiques et des Systèmes d'Information}\\[0.3ex]
+    {\color{white!70!gray}\footnotesize\itshape
+        Chercheur~|~Cryptologue~|~Auditeur Senior~|~Expert Judiciaire~|~GRC \& Sécurité de l'Information}\\[1.2ex]
+    {\color{CouleurAccent}\rule{0.7\linewidth}{1.2pt}}
+\end{center}
+
+\vspace{1cm}
+
+\afterpage{\nopagecolor}
+\end{document}
