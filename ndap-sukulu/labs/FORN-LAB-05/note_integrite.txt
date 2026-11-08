@@ -1,0 +1,5 @@
+Capture mémoire, opération TSANAGA.
+(Document fictif établi pour le cours LPI342. Noms, dates, adresses et montants fictifs.)
+
+Condensat SHA-256 de la capture consigné à l'acquisition.
+Acquisition à chaud justifiée : conteneur chiffré monté à la saisie.

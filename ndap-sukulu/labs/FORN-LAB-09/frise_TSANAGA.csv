@@ -1,0 +1,9 @@
+Repère;Horodatage;Événement;Source
+E1;2026-01-02 15:00;rapport.docx modifié (poste NDONGO);disque
+E2;2026-01-03 09:12;clients.xlsx ouvert;disque
+E3;2026-01-03 09:18;clé USB branchée (E:);journal périphériques
+E4;2026-01-03 09:20;clients.xlsx copié vers E:;raccourci récent
+E5;2026-01-03 09:21;capture d'écran du classeur (téléphone);mobile
+E6;2026-01-03 09:25;appel vers 'ACHETEUR';mobile
+E7;2026-01-05 22:05;message « fichier envoyé »;mobile
+E8;2026-01-05 22:10;téléversement 18 Mo vers hébergement;flux réseau

@@ -1,0 +1,6 @@
+Pièce;État;Statut
+P1 image disque;scellé intact, condensat concordant, chaîne complète;recevable
+P2 clé USB;condensat non concordant (image non fidèle);écartée
+P3 capture mémoire;acquisition à chaud justifiée et documentée;recevable
+P4 fichier isolé;origine inconnue, hors chaîne de possession;écartée
+P5 extraction mobile;méthode documentée, condensat consigné;recevable

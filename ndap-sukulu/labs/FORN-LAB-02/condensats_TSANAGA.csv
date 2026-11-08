@@ -1,0 +1,6 @@
+Élément;Fonction;Condensat (abrégé);Concorde avec l'original
+Disque (original, acquisition);SHA-256;a1b2...9f;oui
+Disque (image);SHA-256;a1b2...9f;oui
+Disque (image, avant session 2);SHA-256;a1b2...9f;oui
+Clé USB (original, acquisition);SHA-256;7c3d...11;oui
+Clé USB (image);SHA-256;7c3d...22;non

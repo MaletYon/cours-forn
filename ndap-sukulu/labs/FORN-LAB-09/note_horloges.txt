@@ -1,0 +1,5 @@
+Reconstitution chronologique, opération TSANAGA.
+(Document fictif établi pour le cours LPI342. Noms, dates, adresses et montants fictifs.)
+
+Décalages d'horloge relevés et corrigés (référence UTC+1).
+Chaque événement est attesté par au moins une source indépendante.

@@ -1,0 +1,6 @@
+Type;Élément;Observation
+processus;veracrypt.exe;conteneur chiffré monté
+secret;clé de conteneur (en clair);déchiffre le conteneur
+connexion;vers service-hebergement.example:443;ouverte à la saisie
+fichier ouvert;clients.xlsx (dans le conteneur);présent en mémoire
+processus;explorer.exe;normal

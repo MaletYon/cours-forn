@@ -1,0 +1,5 @@
+Source;Destination;Date;Volume (Mo);Nature
+poste NDONGO;service-hebergement.example;05/01 22:10;18;téléversement
+poste NDONGO;mises-a-jour.local;quotidien;5;légitime
+poste NDONGO;intranet.lizbiz.local;continu;200;légitime
+poste NDONGO;messagerie.lizbiz.local;03/01 18:00;2;courriel sortant

@@ -1,0 +1,8 @@
+Extrait du brouillon de rapport, opération TSANAGA.
+(Document fictif établi pour le cours LPI342. Noms, dates, adresses et montants fictifs.)
+
+Constatation : clients.xlsx copié vers un amovible le 03/01 à 09:20 (artefacts NTFS).
+Analyse : l'auteur de la copie est probablement l'utilisateur de la session ouverte
+(niveau de confiance moyen, à recouper avec l'accès physique au poste).
+La phrase « M. NDONGO est coupable » ne doit PAS figurer : la culpabilité
+relève du juge, non de l'expert.
