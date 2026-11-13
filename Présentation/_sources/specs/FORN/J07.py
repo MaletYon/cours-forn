@@ -55,7 +55,7 @@ SPEC = [{'k': 'title',
  {'k': 'scenario',
   'title': "Documenter l'Acquisition",
   'label': "Opération TSANAGA. L'image du disque",
-  'text': ['**Constatation.** Derrière un bloqueur en écriture, Mme NKENG réalise une image bit à bit du '
+  'text': ['**Constatation.** Derrière un bloqueur en écriture, Mme DJUIDJE réalise une image bit à bit du '
            "disque de l'ordinateur et calcule son condensat SHA-256, qu'elle consigne. Toute l'analyse se "
            'fera sur cette image.',
            '**Analyse** (confiance élevée). Le condensat consigné permettra, à tout moment, de prouver que '

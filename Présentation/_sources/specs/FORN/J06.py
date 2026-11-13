@@ -52,7 +52,7 @@ SPEC = [{'k': 'title',
  {'k': 'scenario',
   'title': "Protéger contre l'Écriture",
   'label': 'Opération TSANAGA. Le bloqueur en écriture',
-  'text': ['**Constatation.** Pour lire le disque et la clé saisis, Mme NKENG passe par un **bloqueur en '
+  'text': ['**Constatation.** Pour lire le disque et la clé saisis, Mme DJUIDJE passe par un **bloqueur en '
            'écriture** (matériel ou logiciel), qui autorise la lecture mais interdit toute modification du '
            'support.',
            '**Analyse** (confiance élevée). Sans bloqueur, le simple branchement aurait pu écrire sur le '

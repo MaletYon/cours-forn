@@ -58,7 +58,7 @@ Questions à choix multiple (une seule bonne réponse)
       c) La météo
       d) La copie
 
- 9. Mme NKENG calcule un condensat :
+ 9. Mme DJUIDJE calcule un condensat :
       a) SHA-256
       b) MD5 seul
       c) De vente

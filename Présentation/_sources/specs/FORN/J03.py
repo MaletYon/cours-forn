@@ -40,7 +40,7 @@ SPEC = [{'k': 'title',
  {'k': 'scenario',
   'title': 'Documenter',
   'label': "Opération TSANAGA. Le journal d'enquête",
-  'text': ["**Constatation.** Dès la réception des scellés, Mme NKENG ouvre un journal d'enquête : chaque "
+  'text': ["**Constatation.** Dès la réception des scellés, Mme DJUIDJE ouvre un journal d'enquête : chaque "
            'acte y est horodaté, décrit, signé.',
            "**Analyse** (confiance élevée). Le journal n'est pas une formalité : c'est lui qui rendra "
            "l'enquête reproductible et opposable. Une analyse non documentée, même exacte, sera contestée au "
